@@ -1,0 +1,12 @@
+# security.txt for Jubilee2040.com
+# Following RFC 9116 — Contact and Disclosure Policy for Security Issues
+
+Contact: mailto:contact@jubilee2040.com
+Encryption: https://jubilee2040.com/pgp-key.txt
+Preferred-Languages: en
+Canonical: https://jubilee2040.com/.well-known/security.txt
+Policy: https://jubilee2040.com/security-policy.html
+Acknowledgments: https://jubilee2040.com/thanks.html
+
+# Optional: how quickly you usually respond (1–2 days is standard)
+Expires: 2026-10-17
