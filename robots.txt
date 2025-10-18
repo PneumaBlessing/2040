@@ -1,0 +1,33 @@
+# robots.txt for Jubilee2040.com
+# This file tells search engine crawlers which pages they can access
+
+User-agent: *
+Allow: /
+
+# Sitemap location - helps search engines find all your pages
+Sitemap: https://jubilee2040.com/sitemap.xml
+
+# Allow all major search engines explicitly
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block bad bots (optional - uncomment if needed)
+# User-agent: AhrefsBot
+# Disallow: /
+
+# User-agent: SemrushBot
+# Disallow: /
+
+# If you add admin or development folders later, block them:
+# Disallow: /admin/
+# Disallow: /temp/
+# Disallow: /_dev/
