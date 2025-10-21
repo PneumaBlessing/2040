@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priestly Course Calculator - Complete Timeline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .info-banner {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .reference-points {
+            background: linear-gradient(135deg, #56ab2f, #a8e063);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .reference-points h3 {
+            margin-bottom: 10px;
+        }
+        
+        .reference-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .reference-item {
+            background: rgba(255,255,255,0.2);
+            padding: 8px;
+            border-radius: 5px;
+        }
+        
+        .main-calculator {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .input-section {
+            margin-bottom: 30px;
+        }
+        
+        .input-method {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .method-selector {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .method-button {
+            flex: 1;
+            padding: 10px;
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #243b55;
+            font-weight: 600;
+        }
+        
+        .method-button:hover {
+            background: #f0f4ff;
+        }
+        
+        .method-button.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            font-weight: 600;
+            color: #243b55;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        input, select {
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+            background: #f8f9fa;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        button {
+            flex: 1;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102,126,234,0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .secondary-button {
+            background: linear-gradient(135deg, #56ab2f, #a8e063);
+        }
+        
+        .results {
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            animation: slideIn 0.5s ease;
+        }
+        
+        .results h2 {
+            color: #243b55;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .result-grid {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .result-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .result-label {
+            font-weight: 600;
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        .result-value {
+            font-size: 1.2em;
+            color: #243b55;
+            font-weight: 500;
+        }
+        
+        .course-display {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(102,126,234,0.3);
+        }
+        
+        .course-number {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .course-name {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        
+        .course-meaning {
+            font-size: 1em;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        .quick-links {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .quick-links h3 {
+            color: #243b55;
+            margin-bottom: 15px;
+        }
+        
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        
+        .quick-link {
+            padding: 10px;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+        
+        .quick-link:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .table-container {
+            margin-top: 30px;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        tr:hover {
+            background: #f5f7fa;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .error-message {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .special-note {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .jubilee-info {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        
+        .jubilee-info h4 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏛️ Priestly Course Calculator</h1>
+            <p class="subtitle">24 Courses Rotating from 950 BC to 2040+ AD</p>
+            <p class="subtitle">Based on the Unified Chronology System</p>
+        </header>
+        
+        <div class="info-banner">
+            <strong>📜 System Rules:</strong> 48 weeks per lunar year | 24 courses rotating weekly | 4 weeks per month | No year 0
+        </div>
+        
+        <div class="reference-points">
+            <h3>🎯 Key Reference Points (Verified)</h3>
+            <div class="reference-grid">
+                <div class="reference-item">
+                    <strong>950 BC:</strong> Temple Dedication - Courses begin service
+                </div>
+                <div class="reference-item">
+                    <strong>530 BC:</strong> Jehoiarib serving Week 1 of Av - First Temple Destruction
+                </div>
+                <div class="reference-item">
+                    <strong>70 AD:</strong> Jehoiarib serving Week 2 of Av - Second Temple Destruction
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-calculator">
+            <div class="input-section">
+                <div class="input-method">
+                    <div class="method-selector">
+                        <button class="method-button active" onclick="setInputMethod('month-week')">
+                            Month & Week Method
+                        </button>
+                        <button class="method-button" onclick="setInputMethod('year-week')">
+                            Year Week Method (1-48)
+                        </button>
+                    </div>
+                    
+                    <div id="month-week-inputs">
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label for="year">Year</label>
+                                <input type="number" id="year" placeholder="e.g., 530" value="530" min="-950" max="2100">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="year-type">Year Type</label>
+                                <select id="year-type">
+                                    <option value="bc">BC</option>
+                                    <option value="ad">AD</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="month">Month (1-12)</label>
+                                <select id="month">
+                                    <option value="1">1 - Nisan</option>
+                                    <option value="2">2 - Iyar</option>
+                                    <option value="3">3 - Sivan</option>
+                                    <option value="4">4 - Tammuz</option>
+                                    <option value="5">5 - Av</option>
+                                    <option value="6">6 - Elul</option>
+                                    <option value="7">7 - Tishri</option>
+                                    <option value="8">8 - Cheshvan</option>
+                                    <option value="9">9 - Kislev</option>
+                                    <option value="10">10 - Tevet</option>
+                                    <option value="11">11 - Shevat</option>
+                                    <option value="12">12 - Adar</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="week-of-month">Week of Month (1-4)</label>
+                                <select id="week-of-month">
+                                    <option value="1">Week 1</option>
+                                    <option value="2">Week 2</option>
+                                    <option value="3">Week 3</option>
+                                    <option value="4">Week 4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="year-week-inputs" class="hidden">
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label for="year2">Year</label>
+                                <input type="number" id="year2" placeholder="e.g., 530" value="530" min="-950" max="2100">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="year-type2">Year Type</label>
+                                <select id="year-type2">
+                                    <option value="bc">BC</option>
+                                    <option value="ad">AD</option>
+                                </select>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="week-of-year">Week of Year (1-48)</label>
+                                <input type="number" id="week-of-year" placeholder="1-48" value="17" min="1" max="48">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button onclick="calculateCourse()">Calculate Course</button>
+                    <button class="secondary-button" onclick="showYearSchedule()">Show Full Year Schedule</button>
+                </div>
+            </div>
+            
+            <div id="results" class="results hidden"></div>
+            
+            <div id="year-schedule" class="table-container hidden"></div>
+        </div>
+        
+        <div class="quick-links">
+            <h3>📍 Quick Navigation - Historical Events</h3>
+            <div class="link-grid">
+                <button class="quick-link" onclick="setQuickDate(950, 'bc', 7, 3)">950 BC - Temple Dedication</button>
+                <button class="quick-link" onclick="setQuickDate(530, 'bc', 5, 1)">530 BC - 1st Temple (Av W1)</button>
+                <button class="quick-link" onclick="setQuickDate(70, 'ad', 5, 2)">70 AD - 2nd Temple (Av W2)</button>
+                <button class="quick-link" onclick="setQuickDate(460, 'bc', 7, 2)">460 BC - 70th Jubilee</button>
+                <button class="quick-link" onclick="setQuickDate(4, 'bc', 7, 1)">4 BC - Zacharias</button>
+                <button class="quick-link" onclick="setQuickDate(31, 'ad', 1, 3)">31 AD - Crucifixion</button>
+                <button class="quick-link" onclick="setQuickDate(2024, 'ad', 1, 1)">2024 AD - Current</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // The 24 Priestly Courses with meanings
+        const priestlyCourses = [
+            { number: 1, name: 'Jehoiarib', meaning: 'Yahweh contends' },
+            { number: 2, name: 'Jedaiah', meaning: 'Yahweh knows' },
+            { number: 3, name: 'Harim', meaning: 'Dedicated' },
+            { number: 4, name: 'Seorim', meaning: 'Barley' },
+            { number: 5, name: 'Malchijah', meaning: 'My king is Yahweh' },
+            { number: 6, name: 'Mijamin', meaning: 'From the right hand' },
+            { number: 7, name: 'Hakkoz', meaning: 'The thorn' },
+            { number: 8, name: 'Abijah', meaning: 'My father is Yahweh' },
+            { number: 9, name: 'Jeshuah', meaning: 'Yahweh saves' },
+            { number: 10, name: 'Shecaniah', meaning: 'Yahweh dwells' },
+            { number: 11, name: 'Eliashib', meaning: 'God restores' },
+            { number: 12, name: 'Jakim', meaning: 'He raises up' },
+            { number: 13, name: 'Huppah', meaning: 'Canopy' },
+            { number: 14, name: 'Jeshebeab', meaning: 'Father dwells' },
+            { number: 15, name: 'Bilgah', meaning: 'Cheerfulness' },
+            { number: 16, name: 'Immer', meaning: 'He has said' },
+            { number: 17, name: 'Hezir', meaning: 'Swine' },
+            { number: 18, name: 'Happizzez', meaning: 'The shattered' },
+            { number: 19, name: 'Pethahiah', meaning: 'Yahweh opens' },
+            { number: 20, name: 'Jehezekel', meaning: 'God strengthens' },
+            { number: 21, name: 'Jachin', meaning: 'He establishes' },
+            { number: 22, name: 'Gamul', meaning: 'Rewarded' },
+            { number: 23, name: 'Delaiah', meaning: 'Yahweh has drawn' },
+            { number: 24, name: 'Maaziah', meaning: 'Yahweh is a refuge' }
+        ];
+        
+        let currentInputMethod = 'month-week';
+        
+        function setInputMethod(method) {
+            currentInputMethod = method;
+            const monthWeekInputs = document.getElementById('month-week-inputs');
+            const yearWeekInputs = document.getElementById('year-week-inputs');
+            const buttons = document.querySelectorAll('.method-button');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            if (method === 'month-week') {
+                monthWeekInputs.classList.remove('hidden');
+                yearWeekInputs.classList.add('hidden');
+                buttons[0].classList.add('active');
+            } else {
+                monthWeekInputs.classList.add('hidden');
+                yearWeekInputs.classList.remove('hidden');
+                buttons[1].classList.add('active');
+            }
+        }
+        
+        function calculatePriestlyCourse(year, isBC, weekOfYear) {
+            // Following REBOL script logic exactly
+            // Reference year (do not change - calibrated)
+            const refYear = -970;
+            const sabbaticalRef = 7;
+            const jubileeRef = -3890;
+            
+            // Determine BC or AD
+            const bcOrAd = isBC ? "BC" : "AD";
+            
+            // Calculate scale (years since reference point)
+            // This matches the REBOL: scale: either bc-or-ad = "BC" [1 + abs (ref-year - year)][abs (ref-year - year)]
+            let scale;
+            if (isBC) {
+                scale = 1 + Math.abs(refYear - (-year));
+            } else {
+                scale = Math.abs(refYear - year);
+            }
+            
+            // Determine priestly course for start of year
+            // This matches REBOL: baseCourse: either scale // 24 = 0 [24] [scale // 24]
+            let baseCourse = scale % 24;
+            if (baseCourse === 0) baseCourse = 24;
+            
+            // Calculate offset from first week
+            const weeklyOffset = weekOfYear - 1;
+            const courseAdj = baseCourse + weeklyOffset;
+            
+            // Rotate within 24-course cycle
+            let rotatedCourse = courseAdj % 24;
+            const finalCourse = rotatedCourse === 0 ? 24 : rotatedCourse;
+            
+            // Get course (adjust for 0-based array)
+            const course = priestlyCourses[finalCourse - 1];
+            
+            // Calculate Sabbatical year
+            const sabbaticalCycle = 7;
+            const result = ((sabbaticalRef + scale - 1) % sabbaticalCycle) + 1;
+            const sabbaticalResult = weekOfYear > 25 ? 
+                (result === 7 ? 1 : result + 1) : 
+                result;
+            
+            // Calculate Jubilee information
+            const scaleAdj = scale - 21; // aligns to 60th Jubilee base in 950 BC
+            let jubileeCycleYear = scaleAdj % 49;
+            if (jubileeCycleYear === 0) jubileeCycleYear = 49;
+            
+            let jubilee = Math.abs(Math.floor((jubileeRef - (-Math.abs(year))) / 49) + 1);
+            if (jubileeCycleYear < 49) jubilee = jubilee + 1;
+            jubilee = jubilee + 1;
+            
+            // Check if in Jubilee year
+            const isJubileeYear = jubileeCycleYear === 49 && weekOfYear > 25;
+            if (isJubileeYear) jubilee = jubilee + 1;
+            
+            return {
+                course: course,
+                finalCourse: finalCourse,
+                scale: scale,
+                baseCourse: baseCourse,
+                sabbaticalYear: sabbaticalResult,
+                jubileeCycle: jubilee,
+                jubileeCycleYear: jubileeCycleYear,
+                isJubileeYear: isJubileeYear
+            };
+        }
+        
+        function calculateCourse() {
+            let year, isBC, weekOfYear;
+            
+            if (currentInputMethod === 'month-week') {
+                year = parseInt(document.getElementById('year').value);
+                isBC = document.getElementById('year-type').value === 'bc';
+                const month = parseInt(document.getElementById('month').value);
+                const weekOfMonth = parseInt(document.getElementById('week-of-month').value);
+                
+                // Calculate week of year from month and week of month
+                // Each month has 4 weeks
+                weekOfYear = (month - 1) * 4 + weekOfMonth;
+            } else {
+                year = parseInt(document.getElementById('year2').value);
+                isBC = document.getElementById('year-type2').value === 'bc';
+                weekOfYear = parseInt(document.getElementById('week-of-year').value);
+            }
+            
+            // Validate inputs
+            if (isNaN(year) || isNaN(weekOfYear)) {
+                showError('Please enter valid numbers for all fields.');
+                return;
+            }
+            
+            if (weekOfYear < 1 || weekOfYear > 48) {
+                showError('Week of year must be between 1 and 48.');
+                return;
+            }
+            
+            if (year > 950 && isBC) {
+                showError('Priestly courses began in 950 BC. Please enter a year from 950 BC onward.');
+                return;
+            }
+            
+            const result = calculatePriestlyCourse(year, isBC, weekOfYear);
+            
+            // Calculate month and week of month from week of year
+            const month = Math.ceil(weekOfYear / 4);
+            const weekOfMonth = ((weekOfYear - 1) % 4) + 1;
+            
+            const resultsDiv = document.getElementById('results');
+            
+            let html = '<h2>Priestly Course Analysis</h2>';
+            
+            html += '<div class="course-display">';
+            html += `<div class="course-number">#${result.course.number}</div>`;
+            html += `<div class="course-name">${result.course.name}</div>`;
+            html += `<div class="course-meaning">"${result.course.meaning}"</div>`;
+            html += '</div>';
+            
+            html += '<div class="result-grid">';
+            
+            html += `<div class="result-item">
+                <span class="result-label">Year:</span>
+                <span class="result-value">${year} ${isBC ? 'BC' : 'AD'}</span>
+            </div>`;
+            
+            html += `<div class="result-item">
+                <span class="result-label">Month:</span>
+                <span class="result-value">${getMonthName(month)} (Month ${month})</span>
+            </div>`;
+            
+            html += `<div class="result-item">
+                <span class="result-label">Week of Month:</span>
+                <span class="result-value">Week ${weekOfMonth}</span>
+            </div>`;
+            
+            html += `<div class="result-item">
+                <span class="result-label">Week of Year:</span>
+                <span class="result-value">Week ${weekOfYear} of 48</span>
+            </div>`;
+            
+            html += `<div class="result-item">
+                <span class="result-label">Years from Reference (970 BC):</span>
+                <span class="result-value">${result.scale}</span>
+            </div>`;
+            
+            html += `<div class="result-item">
+                <span class="result-label">First Course of Year:</span>
+                <span class="result-value">Course #${result.baseCourse}</span>
+            </div>`;
+            
+            html += '</div>';
+            
+            // Jubilee and Sabbatical information
+            html += '<div class="jubilee-info">';
+            html += '<h4>Jubilee & Sabbatical Information</h4>';
+            html += `<p><strong>Jubilee Cycle:</strong> ${result.jubileeCycle}</p>`;
+            html += `<p><strong>Year in Jubilee Cycle:</strong> ${result.jubileeCycleYear} of 49</p>`;
+            html += `<p><strong>Sabbatical Cycle Year:</strong> ${result.sabbaticalYear}</p>`;
+            if (result.isJubileeYear) {
+                html += `<p><strong>🎺 THIS IS JUBILEE YEAR #${result.jubileeCycle}!</strong></p>`;
+            }
+            html += '</div>';
+            
+            // Check for special alignments
+            if (year === 530 && isBC && month === 5 && weekOfMonth === 1) {
+                html += '<div class="special-note">🏛️ FIRST TEMPLE DESTRUCTION - Jehoiarib serving in Week 1 of Av!</div>';
+            }
+            
+            if (year === 70 && !isBC && month === 5 && weekOfMonth === 2) {
+                html += '<div class="special-note">🏛️ SECOND TEMPLE DESTRUCTION - Jehoiarib serving in Week 2 of Av!</div>';
+            }
+            
+            if (year === 4 && isBC && month === 7 && result.course.number === 8) {
+                html += '<div class="special-note">📜 Zacharias (Course of Abijah) serving when John the Baptist was announced!</div>';
+            }
+            
+            resultsDiv.innerHTML = html;
+            resultsDiv.classList.remove('hidden');
+        }
+        
+        function showYearSchedule() {
+            let year, isBC;
+            
+            if (currentInputMethod === 'month-week') {
+                year = parseInt(document.getElementById('year').value);
+                isBC = document.getElementById('year-type').value === 'bc';
+            } else {
+                year = parseInt(document.getElementById('year2').value);
+                isBC = document.getElementById('year-type2').value === 'bc';
+            }
+            
+            if (isNaN(year)) {
+                showError('Please enter a valid year.');
+                return;
+            }
+            
+            if (year > 950 && isBC) {
+                showError('Priestly courses began in 950 BC. Please enter a year from 950 BC onward.');
+                return;
+            }
+            
+            const scheduleDiv = document.getElementById('year-schedule');
+            
+            let html = `<h3>Full Year Schedule for ${year} ${isBC ? 'BC' : 'AD'}</h3>`;
+            html += '<table>';
+            html += '<thead><tr><th>Month #</th><th>Month Name</th><th>Week of Month</th><th>Week of Year</th><th>Course #</th><th>Course Name</th></tr></thead>';
+            html += '<tbody>';
+            
+            for (let weekOfYear = 1; weekOfYear <= 48; weekOfYear++) {
+                const month = Math.ceil(weekOfYear / 4);
+                const weekOfMonth = ((weekOfYear - 1) % 4) + 1;
+                const result = calculatePriestlyCourse(year, isBC, weekOfYear);
+                
+                html += '<tr>';
+                html += `<td>${month}</td>`;
+                html += `<td>${getMonthName(month)}</td>`;
+                html += `<td>Week ${weekOfMonth}</td>`;
+                html += `<td>${weekOfYear}</td>`;
+                html += `<td>${result.course.number}</td>`;
+                html += `<td>${result.course.name}</td>`;
+                html += '</tr>';
+            }
+            
+            html += '</tbody></table>';
+            
+            scheduleDiv.innerHTML = html;
+            scheduleDiv.classList.remove('hidden');
+        }
+        
+        function getMonthName(month) {
+            const monthNames = [
+                'Nisan', 'Iyar', 'Sivan', 'Tammuz', 'Av', 'Elul',
+                'Tishri', 'Cheshvan', 'Kislev', 'Tevet', 'Shevat', 'Adar'
+            ];
+            return monthNames[month - 1] || `Month ${month}`;
+        }
+        
+        function setQuickDate(year, type, month, weekOfMonth) {
+            // Make sure we're in month-week mode
+            setInputMethod('month-week');
+            
+            document.getElementById('year').value = year;
+            document.getElementById('year-type').value = type;
+            document.getElementById('month').value = month;
+            document.getElementById('week-of-month').value = weekOfMonth;
+            calculateCourse();
+        }
+        
+        function showError(message) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `<div class="error-message">${message}</div>`;
+            resultsDiv.classList.remove('hidden');
+        }
+        
+        // Test function to verify key dates
+        function testKeyDates() {
+            console.log("Testing key dates:");
+            
+            // Test 530 BC, Week 17 (Month 5, Week 1)
+            let result530 = calculatePriestlyCourse(530, true, 17);
+            console.log(`530 BC, Week 17: Course #${result530.finalCourse} - ${result530.course.name} (Should be Jehoiarib)`);
+            
+            // Test 70 AD, Week 18 (Month 5, Week 2)
+            let result70 = calculatePriestlyCourse(70, false, 18);
+            console.log(`70 AD, Week 18: Course #${result70.finalCourse} - ${result70.course.name} (Should be Jehoiarib)`);
+            
+            // Test 460 BC, Week 26 (Month 7, Week 2) - 70th Jubilee
+            let result460 = calculatePriestlyCourse(460, true, 26);
+            console.log(`460 BC, Week 26: Course #${result460.finalCourse} - ${result460.course.name}`);
+            console.log(`  Jubilee Cycle: ${result460.jubileeCycle}, Year in cycle: ${result460.jubileeCycleYear}`);
+        }
+        
+        // Initialize with default values on load
+        window.onload = function() {
+            // Set default to 530 BC, Month 5, Week 1
+            document.getElementById('year').value = 530;
+            document.getElementById('year-type').value = 'bc';
+            document.getElementById('month').value = 5;
+            document.getElementById('week-of-month').value = 1;
+            
+            // Run tests in console to verify calculations
+            testKeyDates();
+        };
+    </script>
+</body>
+</html>
