@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priestly Jubilee Calculator - Biblical Chronology Tool | Jubilee2040.com</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Calculate Jubilee cycles, sabbatical years, and priestly courses based on 1 Chronicles 24. A mathematical tool for biblical chronology research anchored in 950 BC.">
+    <meta name="keywords" content="Jubilee calculator, biblical chronology, priestly courses, sabbatical year, 1 Chronicles 24, biblical calendar, Jubilee cycle">
+    <meta name="author" content="Jubilee2040.com">
+
+    <!-- Academic/Scholarly Meta Tags -->
+    <meta name="citation_title" content="Priestly Jubilee Calculator">
+    <meta name="citation_author" content="Jubilee2040">
+    <meta name="citation_publication_date" content="2024">
+    <meta name="citation_online_date" content="2024">
+    <meta name="DC.title" content="Priestly Jubilee Calculator - Biblical Chronology Tool">
+    <meta name="DC.creator" content="Jubilee2040">
+    <meta name="DC.subject" content="Biblical Chronology; Jubilee Cycles; Priestly Courses; Biblical Calendar">
+    <meta name="DC.description" content="Interactive calculator for determining Jubilee cycles, sabbatical years, and priestly courses based on the mathematical framework of 1 Chronicles 24">
+    <meta name="DC.type" content="Interactive Resource">
+    <meta name="DC.format" content="text/html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Priestly Jubilee Calculator - Biblical Chronology Tool">
+    <meta property="og:description" content="Calculate Jubilee cycles, sabbatical years, and priestly courses based on 1 Chronicles 24">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jubilee2040.com/calculator.html">
+    <meta property="og:site_name" content="Jubilee2040.com">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Priestly Jubilee Calculator">
+    <meta name="twitter:description" content="Calculate Jubilee cycles and priestly courses based on biblical chronology">
+
+    <!-- Structured Data for Search Engines and AI -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Priestly Jubilee Calculator",
+      "applicationCategory": "EducationalApplication",
+      "description": "Interactive calculator for determining Jubilee cycles, sabbatical years, and priestly courses based on the mathematical framework established in 1 Chronicles 24, anchored at 950 BC when King David established the 24 priestly divisions.",
+      "url": "https://jubilee2040.com/calculator.html",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Jubilee2040",
+        "url": "https://jubilee2040.com"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Biblical Chronology"
+        },
+        {
+          "@type": "Thing",
+          "name": "Jubilee Cycles"
+        },
+        {
+          "@type": "Thing",
+          "name": "Priestly Courses"
+        }
+      ]
+    }
+    </script>
+
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8R34988NR"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+
+     gtag('config', 'G-W8R34988NR');
+   </script>
+
+    <style>
+        /* Jubilee2040.com - Shared Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            line-height: 1.6;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .calc-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        .page-header h1 {
+            font-size: 2.5em;
+            color: #d4af37;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .page-header .subtitle {
+            font-size: 1.2em;
+            color: #b8b8b8;
+            font-style: italic;
+        }
+
+        .calc-container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 35px;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+            border-radius: 4px;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
+        .form-section {
+            display: grid;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        label {
+            display: block;
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 5px;
+            color: #e8e8e8;
+            font-size: 1.1em;
+            font-family: 'Georgia', serif;
+            transition: all 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #d4af37;
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        input[type="number"]::placeholder {
+            color: #888;
+            font-style: italic;
+        }
+
+        .input-note {
+            font-size: 0.9em;
+            color: #b8b8b8;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .calculate-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+            color: #1a1a2e;
+            padding: 18px 40px;
+            font-size: 1.3em;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            font-family: 'Georgia', serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .calculate-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .error-msg {
+            background: rgba(220, 53, 69, 0.2);
+            border: 2px solid #dc3545;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #ff6b6b;
+            font-weight: bold;
+            text-align: center;
+            display: none;
+        }
+
+        .result-box {
+            margin-top: 40px;
+            background: rgba(15, 15, 25, 0.8);
+            padding: 35px;
+            border-radius: 8px;
+            border: 2px solid #d4af37;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+            display: none;
+        }
+
+        .jubilee-alert {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.3) 0%, rgba(212, 175, 55, 0.15) 100%);
+            border: 3px solid #d4af37;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            display: none;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(212, 175, 55, 0.8);
+            }
+        }
+
+        .jubilee-alert-title {
+            font-size: 1.8em;
+            color: #d4af37;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .jubilee-alert-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .jubilee-number {
+            font-size: 2.2em;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .result-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .result-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #d4af37;
+            transform: translateY(-3px);
+        }
+
+        .result-label {
+            color: #d4af37;
+            font-size: 0.95em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .result-value {
+            color: #fff;
+            font-size: 1.8em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .meta-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 5px;
+            border-top: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .meta-info-title {
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meta-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 0.95em;
+        }
+
+        .meta-item:last-child {
+            border-bottom: none;
+        }
+
+        .meta-label {
+            color: #b8b8b8;
+        }
+
+        .meta-value {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            .page-header h1 {
+                font-size: 1.8em;
+            }
+
+            .calc-container {
+                padding: 25px;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .calculate-btn {
+                font-size: 1.1em;
+                padding: 15px 30px;
+            }
+
+            .result-value {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="calc-wrapper">
+        <div class="page-header">
+            <h1>Priestly Jubilee Calculator</h1>
+            <p class="subtitle">Calculate Jubilee Cycles, Sabbatical Years & Priestly Courses</p>
+        </div>
+
+        <div class="calc-container">
+            <div class="intro-text">
+                Based on the mathematical framework of 1 Chronicles 24, this calculator determines the Jubilee cycle, sabbatical year, and priestly course for any date in history. The anchor point is 950 BC, when King David established the 24 priestly divisions.
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="yearInput">Year</label>
+                    <input type="number" id="yearInput" placeholder="e.g. -949 for 949 BC, or 2040 for 2040 AD" required>
+                    <div class="input-note">Enter negative numbers for BC dates, positive for AD dates</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="monthInput">Month (1-12)</label>
+                    <input type="number" id="monthInput" min="1" max="12" value="1" placeholder="Enter month 1-12">
+                </div>
+
+                <div class="form-group">
+                    <label for="weekInput">Week of Month (1-4)</label>
+                    <input type="number" id="weekInput" min="1" max="4" value="1" placeholder="Enter week 1-4">
+                </div>
+            </div>
+
+            <button onclick="calculateJubilee()" class="calculate-btn">Calculate Jubilee</button>
+
+            <div id="errorMessage" class="error-msg"></div>
+
+            <div id="resultBox" class="result-box">
+                <div id="jubileeAlert" class="jubilee-alert">
+                    <div class="jubilee-alert-icon">🎺</div>
+                    <div class="jubilee-alert-title">Proclamation</div>
+                    <div style="font-size: 1.3em; color: #e8e8e8; margin-top: 10px;">This is a Jubilee Year!</div>
+                    <div class="jubilee-number">Jubilee <span id="jubileeNumber">121</span></div>
+                </div>
+
+                <div class="results-grid">
+                    <div class="result-card">
+                        <span class="result-label">Jubilee Cycle</span>
+                        <span class="result-value" id="resJubileeNum">—</span>
+                    </div>
+
+                    <div class="result-card">
+                        <span class="result-label">Year in Cycle</span>
+                        <span class="result-value" id="resJubileeYear">—</span>
+                    </div>
+
+                    <div class="result-card">
+                        <span class="result-label">Sabbatical Year</span>
+                        <span class="result-value" id="resSabbatical">—</span>
+                    </div>
+
+                    <div class="result-card" style="grid-column: 1 / -1;">
+                        <span class="result-label">Priestly Course</span>
+                        <span class="result-value" id="resPriest">—</span>
+                    </div>
+                </div>
+
+                <div class="meta-info">
+                    <div class="meta-info-title">Calculation Details</div>
+                    <div class="meta-item">
+                        <span class="meta-label">Week of Year:</span>
+                        <span class="meta-value" id="resWeekTotal">—</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Years from Reference Point (-970 BC):</span>
+                        <span class="meta-value" id="resScale">—</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculateJubilee() {
+            // --- INPUTS ---
+            const yearInput = document.getElementById('yearInput').value;
+            const monthInput = parseInt(document.getElementById('monthInput').value);
+            const weekInput = parseInt(document.getElementById('weekInput').value);
+
+            const errorDiv = document.getElementById('errorMessage');
+            const resultBox = document.getElementById('resultBox');
+            const jubileeAlert = document.getElementById('jubileeAlert');
+
+            // Reset UI
+            errorDiv.style.display = 'none';
+            resultBox.style.display = 'none';
+            jubileeAlert.style.display = 'none';
+
+            if (!yearInput) {
+                errorDiv.textContent = "Please enter a valid year.";
+                errorDiv.style.display = 'block';
+
+                // Track error event in Google Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'calculation_error', {
+                        'error_type': 'empty_year'
+                    });
+                }
+                return;
+            }
+
+            let year = parseInt(yearInput);
+
+            // Validate Year Range
+            if (year < -950) {
+                errorDiv.textContent = "Error: Out of range. Priestly courses began in 950 BC (-950).";
+                errorDiv.style.display = 'block';
+
+                // Track error event in Google Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'calculation_error', {
+                        'error_type': 'year_out_of_range',
+                        'year_value': year
+                    });
+                }
+                return;
+            }
+
+            // --- LOGIC ---
+            const REF_YEAR = -970;
+
+            // 1. Determine Week of Year (1-48)
+            let totalWeek = weekInput + ((monthInput - 1) * 4);
+
+            // 2. Scale: Years since -970
+            let scale;
+            if (year < 0) {
+                scale = 1 + Math.abs(REF_YEAR - year);
+            } else {
+                scale = Math.abs(REF_YEAR - year);
+            }
+
+            // 3. Scale Adjustment for Jubilee (Align to 950 BC)
+            let scaleAdj = scale - 21;
+
+            // 4. Jubilee Cycle Year (1-49)
+            let jubileeCycleYear = scaleAdj % 49;
+            if (jubileeCycleYear === 0) jubileeCycleYear = 49;
+
+            // 5. Jubilee Cycle Number Calculation
+            let cyclesSinceBase = Math.floor(scaleAdj / 49);
+            let baseCycle = 60;
+
+            let currentCycle = baseCycle + cyclesSinceBase;
+
+            // If we have rolled over into year 1...
+            if (jubileeCycleYear !== 49) {
+                currentCycle += 1;
+            }
+
+            // 6. Jubilee Rollover Logic (Week > 25 in Year 49)
+            if (jubileeCycleYear === 49 && totalWeek > 25) {
+                currentCycle += 1;
+            }
+
+            // 7. Sabbatical Cycle Calculation
+            let sabbRaw = (7 + scale - 1) % 7;
+            let sabbaticalResult = sabbRaw + 1;
+
+            // Rollover Sabbatical if Week > 25
+            let finalSabbatical;
+            if (totalWeek > 25) {
+                 finalSabbatical = (sabbaticalResult === 7) ? 1 : sabbaticalResult + 1;
+            } else {
+                finalSabbatical = sabbaticalResult;
+            }
+
+            // 8. Priestly Course Calculation
+            const priests = [
+                "Jehoiarib", "Jedaiah", "Harim", "Seorim", "Malchijah", "Mijamin",
+                "Hakkoz", "Abijah", "Jeshuah", "Shecaniah", "Eliashib", "Jakim",
+                "Huppah", "Jeshebeab", "Bilgah", "Immer", "Hezir",
+                "Happizzez", "Pethahiah", "Jehezekel", "Jachin", "Gamul", "Delaiah", "Maaziah"
+            ];
+
+            let baseCourse = scale % 24;
+            if (baseCourse === 0) baseCourse = 24;
+
+            let weeklyOffset = totalWeek - 1;
+            let courseAdj = baseCourse + weeklyOffset;
+
+            let rotatedCourse = courseAdj % 24;
+            let finalCourse = (rotatedCourse === 0) ? 24 : rotatedCourse;
+            let priestName = priests[finalCourse - 1];
+
+            // --- DISPLAY LOGIC ---
+
+            // Check for Jubilee Year Condition
+            let isJubileeYear = false;
+            if (jubileeCycleYear === 49 && finalSabbatical === 1) {
+                isJubileeYear = true;
+                // Calculate the Jubilee number (current cycle - 1)
+                let jubileeNum = currentCycle - 1;
+                document.getElementById('jubileeNumber').innerText = jubileeNum;
+                jubileeAlert.style.display = 'block';
+
+                // Track Jubilee calculation in Google Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'jubilee_calculated', {
+                        'jubilee_number': jubileeNum,
+                        'year': year,
+                        'month': monthInput,
+                        'week': weekInput
+                    });
+                }
+            }
+
+            // Populate Text
+            document.getElementById('resJubileeNum').innerText = currentCycle;
+            document.getElementById('resJubileeYear').innerText = jubileeCycleYear + " of 49";
+            document.getElementById('resSabbatical').innerText = finalSabbatical + " of 7";
+            document.getElementById('resPriest').innerText = "#" + finalCourse + " " + priestName;
+
+            document.getElementById('resWeekTotal').innerText = totalWeek;
+            document.getElementById('resScale').innerText = scale + " years";
+
+            // Show Results with smooth animation
+            resultBox.style.display = 'block';
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            // Track successful calculation in Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'calculation_complete', {
+                    'year': year,
+                    'month': monthInput,
+                    'week': weekInput,
+                    'is_jubilee': isJubileeYear,
+                    'cycle_number': currentCycle,
+                    'priestly_course': finalCourse
+                });
+            }
+        }
+
+        // Allow Enter key to submit
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        calculateJubilee();
+                    }
+                });
+            });
+
+            // Track page view
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    'page_title': 'Priestly Jubilee Calculator',
+                    'page_location': window.location.href
+                });
+            }
+        });
+    </script>
+</body>
+</html>
