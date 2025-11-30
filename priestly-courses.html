@@ -1,6 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W8R34988NR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W8R34988NR');
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -703,126 +714,101 @@
         </section>
 
         <section id="section-4" aria-labelledby="heading-4">
-        <h2 id="heading-4">IV. The Annual Rotation Mathematics</h2>
+    <h2>IV. The Annual Rotation Mathematics</h2>
 
-        <p>The genius of the Priestly Course system lies in its perfect mathematical alignment with the lunar year structure.</p>
+    <p>The genius of the Priestly Course system lies in its perfect mathematical alignment with the lunar year structure.</p>
 
-        <h3>Core Mathematical Facts</h3>
+    <h3>Core Mathematical Facts</h3>
+    <p>24 priestly courses × 2 service periods = 48 service weeks</p>
+    <p>Therefore: Each course serves exactly TWICE per year</p>
 
-        <div class="math-formula">
-            12 lunar months × 4 weeks per month = 48 weeks per year<br>
-            24 priestly courses × 2 service periods = 48 service weeks<br>
-            Therefore: Each course serves exactly TWICE per year
+    <h3>The Annual Shift Principle</h3>
+    <p>Because there are 48 weeks but 24 courses, each year experiences a one-course shift in which course serves during which week of the year.</p>
+    <ul>
+        <li>If Course 1 serves Week 1 in Year X</li>
+        <li>Then Course 2 serves Week 1 in Year X+1</li>
+        <li>Then Course 3 serves Week 1 in Year X+2</li>
+        <li>And so forth...</li>
+    </ul>
+    <p>This creates a 24-year cycle before the pattern repeats exactly.</p>
+
+    <h3>Formula for Determining the Serving Course</h3>
+
+    <div class="formula-box">
+        <h4>Variable Definitions:</h4>
+        <div class="variable-def"><strong>WWW</strong> = week of year (1–48)</div>
+        <div class="variable-def"><strong>YYY</strong> = year (negative for BC)</div>
+        <div class="variable-def"><strong>δ</strong> = 1 if Y < 0 (BC year), else 0</div>
+
+        <h4>Step 1: Determine Week of Year</h4>
+        <div class="formula-line">
+            week_of_year = {<br>
+            &nbsp;&nbsp;week_in_month + 4 × (month − 1), if month given<br>
+            &nbsp;&nbsp;week_in_year, otherwise
         </div>
 
-        <div class="key-principle">
-            <h4>The Annual Shift Principle</h4>
-            <p>Because there are 48 weeks but 24 courses, each year experiences a <strong>one-course shift</strong> in which course serves during which week of the year.</p>
-            <ul>
-                <li>If Course 1 serves Week 1 in Year X</li>
-                <li>Then Course 2 serves Week 1 in Year X+1</li>
-                <li>Then Course 3 serves Week 1 in Year X+2</li>
-                <li>And so forth...</li>
-            </ul>
-            <p>This creates a 24-year cycle before the pattern repeats exactly.</p>
+        <h4>Step 2: Calculate Scale</h4>
+        <div class="formula-line">
+            scale = |Y + 970| + δ
         </div>
 
-        <h3>Visual Representation of the Monthly Structure</h3>
-
-        <div style="background: var(--primary-bg); padding: 20px; margin: 25px 0; border-radius: 6px; border: 2px solid var(--accent-color);">
-            <h4 style="color: var(--gold-accent); margin-bottom: 15px; text-align: center;">Structure of a Lunar Month</h4>
-            <div style="font-family: 'Courier New', monospace; color: var(--text-secondary); line-height: 2; font-size: 0.9em;">
-                <div style="text-align: center; color: var(--gold-accent); margin-bottom: 10px;">
-                    <strong>Day 1: 🌙 NEW MOON</strong> (Outside weekly count)
-                </div>
-                <div style="margin: 15px 0; padding: 10px; background: var(--highlight-bg); border-radius: 4px;">
-                    <div style="color: var(--accent-color);"><strong>WEEK 1:</strong></div>
-                    Days 2, 3, 4, 5, 6, 7, <span style="color: var(--gold-accent);"><strong>8 [SABBATH]</strong></span>
-                </div>
-                <div style="margin: 15px 0; padding: 10px; background: var(--highlight-bg); border-radius: 4px;">
-                    <div style="color: var(--accent-color);"><strong>WEEK 2:</strong></div>
-                    Days 9, 10, 11, 12, 13, 14, <span style="color: var(--gold-accent);"><strong>15 [SABBATH]</strong></span>
-                </div>
-                <div style="margin: 15px 0; padding: 10px; background: var(--highlight-bg); border-radius: 4px;">
-                    <div style="color: var(--accent-color);"><strong>WEEK 3:</strong></div>
-                    Days 16, 17, 18, 19, 20, 21, <span style="color: var(--gold-accent);"><strong>22 [SABBATH]</strong></span>
-                </div>
-                <div style="margin: 15px 0; padding: 10px; background: var(--highlight-bg); border-radius: 4px;">
-                    <div style="color: var(--accent-color);"><strong>WEEK 4:</strong></div>
-                    Days 23, 24, 25, 26, 27, 28, <span style="color: var(--gold-accent);"><strong>29 [SABBATH]</strong></span>
-                </div>
-                <div style="text-align: center; color: var(--text-secondary); margin-top: 10px; font-style: italic;">
-                    [Day 30, if present, precedes next month's New Moon]
-                </div>
-            </div>
+        <h4>Step 3: Calculate Base Course</h4>
+        <div class="formula-line">
+            base_course = ((scale − 1) mod 24) + 1
         </div>
 
-        <h3>Visual Representation of the 24-Year Rotation Cycle</h3>
-
-        <div style="background: var(--primary-bg); padding: 20px; margin: 25px 0; border-radius: 6px; border: 2px solid var(--accent-color);">
-            <h4 style="color: var(--gold-accent); margin-bottom: 15px; text-align: center;">Course Serving Week 1 Across Years</h4>
-            <div style="font-family: 'Courier New', monospace; color: var(--text-secondary); line-height: 1.8; font-size: 0.85em;">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 0: Course 1</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 1: Course 2</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 2: Course 3</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 3: Course 4</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 4: Course 5</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 5: Course 6</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 6: Course 7</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 7: Course 8</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 8: Course 9</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 9: Course 10</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 10: Course 11</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 11: Course 12</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 12: Course 13</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 13: Course 14</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 14: Course 15</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 15: Course 16</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 16: Course 17</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 17: Course 18</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 18: Course 19</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 19: Course 20</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 20: Course 21</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 21: Course 22</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 22: Course 23</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px;">Year 23: Course 24</div>
-                    <div style="padding: 8px; background: var(--highlight-bg); border-radius: 4px; border: 2px solid var(--gold-accent);"><strong>Year 24: Course 1</strong> ↻ Cycle Repeats</div>
-                </div>
-                <div style="text-align: center; margin-top: 15px; color: var(--gold-accent);">
-                    <strong>The rotation advances by one course each year, completing a full cycle every 24 years.</strong>
-                </div>
-            </div>
+        <h4>Step 4: Calculate Final Course</h4>
+        <div class="formula-line">
+            Course = ((base_course − 1 + (week_of_year − 1)) mod 24) + 1
         </div>
+    </div>
 
-        <div class="calculation-box">
-            <h4>Formula for Determining the Serving Course</h4>
-            <div class="math-formula">
-                Course Number = ((Year Offset) + (Week Number - 1)) mod 24 + 1
-            </div>
-            <p><strong>Where:</strong></p>
-            <ul>
-                <li><strong>Year Offset:</strong> The number of years since the last time Course 1 served Week 1</li>
-                <li><strong>Week Number:</strong> The week of the year (1-48)</li>
-                <li><strong>mod 24:</strong> The remainder after dividing by 24</li>
-                <li><strong>+1:</strong> Converts from 0-23 range to 1-24 range</li>
-            </ul>
-        </div>
+    <h3>Notes on the Formula</h3>
+    <ul>
+        <li>The formula anchors to a reference point of 970 BC, accounting for the historical establishment of the priestly course system
+        <p>
+		The year <strong>970&nbsp;BC</strong> is used in the calculator as a
+		<strong>computational reference point</strong> (an epoch). It is not a claim
+		about the historical beginning of the priestly courses. The reference year is
+		chosen solely to make the mathematics simple and to ensure the cycle aligns
+		with the <strong>known historical anchor point</strong> in <strong>70&nbsp;AD</strong>.
+		</p>
 
-        <div class="example-box">
-            <h4>Example Calculation</h4>
-            <p><strong>Question:</strong> If Course 1 served Week 1 in the base year (Year 0), which course serves Week 15 in Year 7?</p>
-            <p><strong>Calculation:</strong></p>
-            <div class="math-formula">
-                Course = ((7) + (15 - 1)) mod 24 + 1<br>
-                Course = (7 + 14) mod 24 + 1<br>
-                Course = 21 mod 24 + 1<br>
-                Course = 21 + 1<br>
-                Course = 22 (Gamul)
-            </div>
-            <p><strong>Answer:</strong> Course 22 (Gamul) serves Week 15 of Year 7.</p>
-        </div>
-        </section>
+		<p>
+		Historical sources record that during <strong>Month 5, Week 2 of 70&nbsp;AD</strong>,
+		the course serving in the Temple was <strong>Course&nbsp;1 (Jehoiarib)</strong>.
+		To align the 24-week priestly rotation with this anchor, the algorithm defines
+		a convenient epoch year in the distant past where:
+		</p>
+
+		<ul>
+		  <li><strong>Course 1</strong> serves in</li>
+		  <li><strong>Week 1</strong> of</li>
+		  <li><strong>970 BC</strong></li>
+		</ul>
+
+		<p>
+		This choice allows the entire 24-course cycle to be computed by simple modular
+		arithmetic. By counting the number of years and weeks between 970&nbsp;BC and the
+		target date, and wrapping the cycle every 24 weeks, the calculator reliably
+		reproduces the known 70&nbsp;AD anchor without requiring special handling or
+		historical adjustments.
+		</p>
+
+		<p>
+		Thus, <strong>970 BC is a mathematical convenience</strong>—not a historical
+		assertion about when the priestly courses began. It serves the same role as an
+		epoch year such as 1970 or 2000 in modern computing: a fixed point from which
+		all other calculations are made.
+</p>
+
+        </li>
+        <li>The δ adjustment of +1 for BC years accounts for the absence of a "Year 0" in the BC/AD calendar system</li>
+        <li>All modulo operations use the mathematical definition where the result is always in the range [0, 23], then +1 converts to the course numbering [1, 24]</li>
+        <li>Leap years do not affect the calculation—ignore the 13th month when calculating rotations year-to-year</li>
+    </ul>
+
+    </section>
 
         <section id="section-5" aria-labelledby="heading-5">
         <h2 id="heading-5">V. Leap Years and Adar II</h2>
@@ -899,39 +885,128 @@
         </section>
 
         <section id="section-8" aria-labelledby="heading-8">
-        <h2 id="heading-8">VIII. Practical Application for Calculation</h2>
+    <h2>VIII. Practical Application for Calculation</h2>
 
-        <h3>Step-by-Step Process for Determining Course Service</h3>
+    <h3>Step-by-Step Calculation Examples</h3>
 
-        <div class="calculation-box">
-            <h4>Method 1: Using a Known Base Year</h4>
-            <p><strong>Given:</strong></p>
-            <ul>
-                <li>A base year where you know which course served which week</li>
-                <li>The target year you want to calculate</li>
-                <li>The target week number (1-48)</li>
-            </ul>
+    <div class="example-box">
+        <h4>Example 1: Week 15 of Year 7 AD</h4>
+        <p><strong>Question:</strong> Which course serves in Week 15 of the year 7 AD?</p>
 
-            <p><strong>Steps:</strong></p>
-            <ol>
-                <li>Calculate the number of years from base to target</li>
-                <li>Calculate total offset: (number of years) mod 24</li>
-                <li>Apply formula: Course = ((offset) + (week - 1)) mod 24 + 1</li>
-            </ol>
-            <p><strong>Note:</strong> Leap years have no effect on the rotation calculation. Simply count the number of actual years elapsed, ignoring whether any of those years contained a 13th month.</p>
+        <p><strong>Given:</strong></p>
+        <ul>
+            <li>Year (Y) = 7 (AD years are positive)</li>
+            <li>Week of year (WWW) = 15</li>
+        </ul>
+
+        <p><strong>Calculation:</strong></p>
+
+        <div class="calculation-step">
+            <strong>Step 1:</strong> Determine δ<br>
+            Since Y = 7 > 0, therefore δ = 0
         </div>
 
-        <div class="calculation-box">
-            <h4>Method 2: Using the 950 BC Starting Point</h4>
-            <p><strong>Given that Course 1 began service in Week 1 of Month 8 in 950 BC:</strong></p>
-            <ol>
-                <li>Convert your target date to the Hebrew calendar</li>
-                <li>Calculate years since 950 BC</li>
-                <li>Calculate which month and week within the year</li>
-                <li>Determine course using accumulated offset (ignoring leap years)</li>
-            </ol>
+        <div class="calculation-step">
+            <strong>Step 2:</strong> Calculate scale<br>
+            scale = |7 + 970| + 0<br>
+            scale = 977
         </div>
-        </section>
+
+        <div class="calculation-step">
+            <strong>Step 3:</strong> Calculate base_course<br>
+            base_course = ((977 − 1) mod 24) + 1<br>
+            base_course = (976 mod 24) + 1<br>
+            base_course = 16 + 1<br>
+            base_course = 17
+        </div>
+
+        <div class="calculation-step">
+            <strong>Step 4:</strong> Calculate Course<br>
+            Course = ((17 − 1 + (15 − 1)) mod 24) + 1<br>
+            Course = ((16 + 14) mod 24) + 1<br>
+            Course = (30 mod 24) + 1<br>
+            Course = 6 + 1<br>
+            Course = 7
+        </div>
+
+        <p><strong>Answer:</strong> Course #7 (Hakkoz) serves Week 15 of the year 7 AD.</p>
+        <p><em>This is Week 3 of Month 4.</em></p>
+    </div>
+
+    <div class="example-box">
+        <h4>Example 2: Week 18 of Year 70 AD</h4>
+        <p><strong>Question:</strong> Which course serves in Week 18 of the year 70 AD?</p>
+
+        <p><strong>Given:</strong></p>
+        <ul>
+            <li>Year (Y) = 70</li>
+            <li>Week of year (WWW) = 18</li>
+        </ul>
+
+        <p><strong>Calculation:</strong></p>
+
+        <div class="calculation-step">
+            <strong>Step 1:</strong> δ = 0 (AD year)
+        </div>
+
+        <div class="calculation-step">
+            <strong>Step 2:</strong> scale = |70 + 970| + 0 = 1040
+        </div>
+
+        <div class="calculation-step">
+            <strong>Step 3:</strong> base_course = ((1040 − 1) mod 24) + 1 = (1039 mod 24) + 1 = 7 + 1 = 8
+        </div>
+
+        <div class="calculation-step">
+            <strong>Step 4:</strong> Course = ((8 − 1 + (18 − 1)) mod 24) + 1 = ((7 + 17) mod 24) + 1 = (24 mod 24) + 1 = 0 + 1 = 1
+        </div>
+
+        <p><strong>Answer:</strong> Course #1 (Jehoiarib) serves Week 18 of the year 70 AD.</p>
+        <p><em>This is Week 2 of Month 5.</em></p>
+    </div>
+
+    <div class="example-box">
+        <h4>Example 3: Week 29 of Year 950 BC</h4>
+        <p><strong>Question:</strong> Which course serves in Week 29 of the year 950 BC?</p>
+
+        <p><strong>Given:</strong></p>
+        <ul>
+            <li>Year (Y) = -950 (BC years are negative)</li>
+            <li>Week of year (WWW) = 29</li>
+        </ul>
+
+        <p><strong>Calculation:</strong></p>
+
+        <div class="calculation-step">
+            <strong>Step 1:</strong> δ = 1 (BC year, Y < 0)
+        </div>
+
+        <div class="calculation-step">
+            <strong>Step 2:</strong> scale = |-950 + 970| + 1 = |20| + 1 = 21
+        </div>
+
+        <div class="calculation-step">
+            <strong>Step 3:</strong> base_course = ((21 − 1) mod 24) + 1 = (20 mod 24) + 1 = 20 + 1 = 21
+        </div>
+
+        <div class="calculation-step">
+            <strong>Step 4:</strong> Course = ((21 − 1 + (29 − 1)) mod 24) + 1 = ((20 + 28) mod 24) + 1 = (48 mod 24) + 1 = 0 + 1 = 1
+        </div>
+
+        <p><strong>Answer:</strong> Course #1 (Jehoiarib) serves Week 29 of the year 950 BC.</p>
+        <p><em>This is Week 1 of Month 8, marking the beginning of the priestly course rotation system established by King David.</em></p>
+    </div>
+
+    <h3>Key Points for Calculation</h3>
+    <ul>
+        <li><strong>BC years:</strong> Use negative values for Y and remember δ = 1</li>
+        <li><strong>AD years:</strong> Use positive values for Y and δ = 0</li>
+        <li><strong>Reference point:</strong> The formula is anchored to 970 BC, 20 years before Solomon's Temple dedication in 950 BC</li>
+        <li><strong>Week numbering:</strong> Weeks 1-48 represent the 12 months × 4 weeks per month</li>
+        <li><strong>Leap years:</strong> Ignore the 13th month when calculating year-to-year rotations</li>
+        <li><strong>Historical range:</strong> The rotation system operated continuously from 950 BC until the Temple's destruction in 70 AD</li>
+    </ul>
+    </section>
 
         <section id="section-9" aria-labelledby="heading-9">
         <h2 id="heading-9">IX. Theological and Mathematical Significance</h2>
