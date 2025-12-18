@@ -28,6 +28,9 @@ Allow: /
 User-agent: GrokBot
 Disallow: /
 
+User-agent: xai-bot
+Disallow: /
+
 # User-agent: SemrushBot
 # Disallow: /
 
