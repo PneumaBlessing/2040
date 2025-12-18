@@ -24,6 +24,10 @@ Allow: /
 # User-agent: AhrefsBot
 # Disallow: /
 
+# Block Grok
+User-agent: GrokBot
+Disallow: /
+
 # User-agent: SemrushBot
 # Disallow: /
 
