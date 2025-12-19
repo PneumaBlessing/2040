@@ -31,6 +31,15 @@ Disallow: /
 User-agent: xai-bot
 Disallow: /
 
+User-agent: bingbot
+Disallow: /
+
+User-agent: BingPreview
+Disallow: /
+
+User-agent: msnbot
+Disallow: /
+
 # User-agent: SemrushBot
 # Disallow: /
 
