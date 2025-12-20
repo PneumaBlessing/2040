@@ -106,7 +106,8 @@ body {
 
 /* ===== MAIN CONTENT ===== */
 .main-content {
-    margin: 0 auto 0 280px;  /* top right bottom left - centers with 280px left offset */
+    margin-left: 280px;
+    margin-right: auto;  /* Add this */
     flex: 1;
     padding: 40px 60px;
     max-width: 1200px;
