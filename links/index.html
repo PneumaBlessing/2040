@@ -10,9 +10,9 @@
     <meta name="keywords" content="biblical chronology resources, ancient history, chronology research, jubilee cycles">
     <meta name="author" content="Paul Tretter">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://jubilee2040.com/links/index.html">
+    <link rel="canonical" href="https://jubilee2040.com/links/">
     
-    <!-- Google Analytics (replace with your GA4 tracking ID) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8R34988NR"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -26,15 +26,30 @@
     
     <style>
         .links-container {
-            margin-left: 280px;
+            margin-left: 0;
             padding: 40px 60px;
-            max-width: 1000px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         .links-header {
             border-bottom: 3px solid #d4af37;
             padding-bottom: 20px;
             margin-bottom: 40px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            color: #d4af37;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            color: #fff;
+            text-decoration: underline;
         }
         
         .page-title {
@@ -116,43 +131,53 @@
             opacity: 0.7;
         }
         
-        .placeholder-message {
-            background: rgba(212, 175, 55, 0.1);
-            border: 2px solid #d4af37;
-            border-radius: 8px;
-            padding: 30px;
+        .links-footer {
+            margin-top: 80px;
+            padding: 40px 20px;
+            border-top: 2px solid rgba(212, 175, 55, 0.3);
+            background: rgba(15, 15, 25, 0.5);
+        }
+        
+        .footer-content {
             text-align: center;
-            margin: 40px 0;
-        }
-        
-        .placeholder-message p {
-            font-size: 1.1em;
             color: #b8b8b8;
-            margin-bottom: 15px;
+            font-size: 0.95em;
         }
         
-        .placeholder-message .contact-link {
+        .footer-title {
+            font-size: 1.3em;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+        
+        .footer-content p {
+            margin-bottom: 10px;
+        }
+        
+        .footer-content a {
             color: #d4af37;
             text-decoration: none;
-            font-weight: bold;
+            transition: color 0.3s;
         }
         
-        .placeholder-message .contact-link:hover {
+        .footer-content a:hover {
             color: #fff;
             text-decoration: underline;
         }
         
-        /* Mobile responsive */
-        @media (max-width: 1024px) {
-            .links-container {
-                margin-left: 250px;
-                padding: 30px 40px;
-            }
+        .footer-nav {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
         }
         
+        .footer-nav a {
+            margin: 0 10px;
+        }
+        
+        /* Mobile responsive */
         @media (max-width: 768px) {
             .links-container {
-                margin-left: 0;
                 padding: 20px 15px;
             }
             
@@ -171,143 +196,69 @@
             .link-item h3 {
                 font-size: 1.1em;
             }
+            
+            .footer-nav a {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar Navigation -->
-        <nav class="sidebar">
-            <div class="sidebar-header">
-                <h2><a href="index.html" class="site-title">Jubilee 2040</a></h2>
-                <p class="author">by Paul Tretter</p>
-            </div>
+    <div class="links-container">
+        <header class="links-header">
+            <a href="/" class="back-link">← Back to Home</a>
+            <h1 class="page-title">Other Links & Resources</h1>
+            <p class="page-description">
+                Additional resources, related research, and external references related to the Unified Chronology and biblical chronology studies.
+            </p>
+        </header>
 
-            <div class="nav-section-title">Home</div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
+        <section class="links-section">
+            <h2 class="section-title">Educational Resources</h2>
+            <ul class="links-list">
+                <li class="link-item">
+                    <h3><a href="/links/priestly-courses/">The Priestly Courses: Rotation System and Calendar Structure<span class="external-icon">→</span></a></h3>
+                    <p>Comprehensive analysis of the 24 Priestly Courses established in 1 Chronicles 24, their rotation mechanism, and integration with the ancient Hebrew lunar calendar. Includes mathematical formulas, historical documentation, and an interactive calculator for determining which course served on any date in biblical history.</p>
+                    <div class="link-url">https://jubilee2040.com/links/priestly-courses/</div>
+                </li>
+                <li class="link-item">
+                    <h3><a href="/links/70-missed-sabbaths/">The Algorithm of the 70 Missed Sabbaths<span class="external-icon">→</span></a></h3>
+                    <p>The definitive mathematical proof of the Unified Chronology: the only historical framework that can produce the exact 70 missed Sabbatical years that caused Israel's 70-year exile. Includes the complete, verifiable list of all 70 specific years that no other chronology can provide.</p>
+                    <div class="link-url">https://jubilee2040.com/links/70-missed-sabbaths/</div>
+                </li>
+                
+                <!-- Add more educational resources here as you create them -->
             </ul>
+        </section>
 
-            <div class="nav-section-title">The 12-Step Proof</div>
-            <ul class="nav-menu">
-                <li><a href="01-engine-of-god.html">1. The Engine of God</a></li>
-                <li><a href="02-master-clock.html">2. The Master Clock</a></li>
-                <li><a href="03-supporting-clocks.html">3. The Supporting Clocks</a></li>
-                <li><a href="04-480-paradox.html">4. The 480-Year Paradox</a></li>
-                <li><a href="05-ptolemaic-error.html" class="nav-link">5. The Ptolemaic Error</a></li>
-                <li><a href="06-astronomical-kill-shot.html">6. The Astronomical Kill Shot</a></li>
-                <li><a href="07-broken-compasses.html">7. The Broken Compasses</a></li>
-                <li><a href="08-bayesian-verdict.html">8. The Bayesian Verdict</a></li>
-                <li><a href="09-pentecost-countdown.html">9. The Pentecost Countdown</a></li>
-                <li><a href="10-final-calculation.html">10. The Final Calculation</a></li>
-                <li><a href="11-ultimate-so-what.html">11. The Ultimate "So What"</a></li>
-                <li><a href="12-final-validation.html">12. The Final Validation</a></li>
+        <!-- Example structure for when you add more sections:
+        
+        <section class="links-section">
+            <h2 class="section-title">Related Research</h2>
+            <ul class="links-list">
+                <li class="link-item">
+                    <h3><a href="https://example.com" target="_blank" rel="noopener">Example External Resource<span class="external-icon">↗</span></a></h3>
+                    <p>Description of external resource.</p>
+                    <div class="link-url">https://example.com</div>
+                </li>
             </ul>
+        </section>
+        
+        -->
 
-            <div class="nav-section-title">Resources</div>
-            <ul class="nav-menu">
-                <li><a href="papers/">📄 Research Papers</a></li>
-                <li><a href="links/" class="active">🔗 Other Links</a></li>
-            </ul>
-
-            <div class="nav-section-title">Utilities</div>
-            <ul class="nav-menu">
-                <li><a href="priestly-course-calculator.html">⚙️ Priestly Course Calculator</a></li>
-                <li><a href="calculator.html">🎺 Jubilee Calculator</a></li>
-            </ul>
-        </nav>
-
-        <!-- Main Content -->
-        <main class="main-content links-container">
-            <header class="links-header">
-                <h1 class="page-title">Other Links & Resources</h1>
-                <p class="page-description">
-                    Additional resources, related research, and external references related to the Unified Chronology and biblical chronology studies.
-                </p>
-            </header>
-
-<section class="links-section">
-                <h2 class="section-title">Educational Resources</h2>
-                <ul class="links-list">
-                    <li class="link-item">
-                        <h3><a href="/links/priestly-courses/">The Priestly Courses: Rotation System and Calendar Structure<span class="external-icon">→</span></a></h3>
-                        <p>Comprehensive analysis of the 24 Priestly Courses established in 1 Chronicles 24, their rotation mechanism, and integration with the ancient Hebrew lunar calendar. Includes mathematical formulas, historical documentation, and an interactive calculator for determining which course served on any date in biblical history.</p>
-                        <div class="link-url">https://jubilee2040.com/links/priestly-courses/</div>
-                    </li>
-                    <li class="link-item">
-    <h3><a href="/links/70-missed-sabbaths/">The Algorithm of the 70 Missed Sabbaths<span class="external-icon">→</span></a></h3>
-    <p>The definitive mathematical proof of the Unified Chronology: the only historical framework that can produce the exact 70 missed Sabbatical years that caused Israel's 70-year exile. Includes the complete, verifiable list of all 70 specific years that no other chronology can provide.</p>
-    <div class="link-url">https://jubilee2040.com/links/70-missed-sabbaths/</div>
-</li>
-                    
-                    <!-- Add more educational resources here as you create them -->
-                </ul>
-            </section>
-
-            <!-- You can add more sections like this for different categories:
-            
-            <section class="links-section">
-                <h2 class="section-title">Related Research</h2>
-                <ul class="links-list">
-                    <li class="link-item">
-                        <h3><a href="https://example.com" target="_blank" rel="noopener">Example External Resource<span class="external-icon">↗</span></a></h3>
-                        <p>Description of external resource.</p>
-                        <div class="link-url">https://example.com</div>
-                    </li>
-                </ul>
-            </section>
-            
-            -->
-
-            <!-- Example structure for when you add links -->
-            <!--
-            <section class="links-section">
-                <h2 class="section-title">Related Research</h2>
-                <ul class="links-list">
-                    <li class="link-item">
-                        <h3><a href="https://example.com" target="_blank" rel="noopener">Example Research Paper<span class="external-icon">↗</span></a></h3>
-                        <p>Description of the resource and why it's relevant to the Unified Chronology.</p>
-                        <div class="link-url">https://example.com</div>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="links-section">
-                <h2 class="section-title">Academic Resources</h2>
-                <ul class="links-list">
-                    <li class="link-item">
-                        <h3><a href="https://example.com" target="_blank" rel="noopener">Example Database<span class="external-icon">↗</span></a></h3>
-                        <p>Description of the academic resource.</p>
-                        <div class="link-url">https://example.com</div>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="links-section">
-                <h2 class="section-title">Tools & Calculators</h2>
-                <ul class="links-list">
-                    <li class="link-item">
-                        <h3><a href="https://example.com" target="_blank" rel="noopener">Example Tool<span class="external-icon">↗</span></a></h3>
-                        <p>Description of the external tool.</p>
-                        <div class="link-url">https://example.com</div>
-                    </li>
-                </ul>
-            </section>
-            -->
-
-            <footer class="site-footer">
-                <div class="footer-content">
-                    <p class="footer-title">Jubilee 2040</p>
-                    <p>The Unified Chronology © 2025 Paul Tretter. All rights reserved.</p>
-                    <p>For inquiries: <a href="mailto:contact@jubilee2040.com">contact@jubilee2040.com</a></p>
-                    <div class="footer-nav">
-                        <a href="index.html">Home</a> |
-                        <a href="01-engine-of-god.html">Start Tour</a> |
-                        <a href="about.html">About</a>
-                    </div>
+        <footer class="links-footer">
+            <div class="footer-content">
+                <p class="footer-title">Jubilee 2040</p>
+                <p>The Unified Chronology © 2025 Paul Tretter. All rights reserved.</p>
+                <p>For inquiries: <a href="mailto:contact@jubilee2040.com">contact@jubilee2040.com</a></p>
+                <div class="footer-nav">
+                    <a href="/">Home</a> |
+                    <a href="/01-engine-of-god.html">Start Tour</a> |
+                    <a href="/about.html">About</a>
                 </div>
-            </footer>
-        </main>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
