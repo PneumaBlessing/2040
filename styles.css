@@ -104,26 +104,6 @@ body {
     font-weight: bold;
 }
 
-/* Banner styling */
-.site-banner {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: opacity 0.3s;
-}
-
-.site-title-link {
-    display: block;
-    text-decoration: none;
-}
-
-.site-title-link:hover .site-banner {
-    opacity: 0.85;
-}
-
-
 /* ===== MAIN CONTENT ===== */
 .main-content {
     margin-left: 280px;
