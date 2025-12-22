@@ -104,6 +104,12 @@ body {
     font-weight: bold;
 }
 
+/* ==== Banner by PT ===== */
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
 /* ===== MAIN CONTENT ===== */
 .main-content {
     margin-left: 280px;
