@@ -104,6 +104,15 @@ body {
     font-weight: bold;
 }
 
+/* added by paul */
+.favicon {
+  background-color: #000; /* or any color */
+  width: 64px;
+  height: 64px;
+}
+
+
+
 /* ===== MAIN CONTENT ===== */
 .main-content {
     margin-left: 280px;
