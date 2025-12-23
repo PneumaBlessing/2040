@@ -106,10 +106,10 @@ body {
 
 /* added by paul */
 .favicon {
-  background-color: #000; /* or any color */
-  width: 64px;
-  height: 64px;
+  background-color: transparent;
 }
+
+
 
 
 
