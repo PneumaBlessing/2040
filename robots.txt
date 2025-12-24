@@ -21,18 +21,6 @@ User-agent: DuckDuckBot
 Allow: /
 
 # Block bad bots (optional - uncomment if needed)
-# User-agent: AhrefsBot
-# Disallow: /
-
-# Block Grok
-User-agent: GrokBot
-Disallow: /
-
-User-agent: xai-bot
-Disallow: /
-
-# User-agent: SemrushBot
-# Disallow: /
 
 # If you add admin or development folders later, block them:
 # Disallow: /admin/
