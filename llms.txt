@@ -1,0 +1,117 @@
+# llms.txt for Jubilee2040
+# Canonical location: https://jubilee2040.com/llms.txt
+# Last updated: 2025-12-25
+# Owner: Jubilee2040 / Paul Tretter
+
+# --------------------------------------------------------------------
+# 1. Scope and intent
+# --------------------------------------------------------------------
+# This file specifies how large language models (LLMs) and similar AI
+# systems are permitted to interact with content hosted on
+# https://jubilee2040.com and its subdomains, unless explicitly
+# overridden on a specific subdomain or path.
+#
+# "AI agents" or "LLMs" here include: web-crawling models, retrieval
+# systems, and offline training pipelines that collect or process web
+# content for machine learning or model adaptation.
+
+site: https://jubilee2040.com
+
+# --------------------------------------------------------------------
+# 2. General principles
+# --------------------------------------------------------------------
+# 2.1. Reading for human use is allowed.
+#       AI systems may:
+#       - Fetch and display excerpts to human users,
+#       - Use content for one-off question answering and retrieval,
+#       - Index pages for search and navigation.
+#
+# 2.2. Model training and fine-tuning are NOT allowed without
+#      explicit, written permission and a separate license agreement.
+#
+# 2.3. No derivative models, embeddings, or datasets may be created
+#      from this content without permission.
+
+policy: human-facing_retrieval_only
+training: disallow
+derivative_datasets: disallow
+derivative_models: disallow
+
+# --------------------------------------------------------------------
+# 3. Allowed AI uses
+# --------------------------------------------------------------------
+# AI agents are allowed to:
+# - Index pages to improve search, navigation, and discovery.
+# - Retrieve and show short excerpts to end users.
+# - Perform limited caching necessary for retrieval and ranking.
+# - Respect all robots.txt directives on this domain.
+
+allow_use: search_indexing
+allow_use: retrieval_augmented_generation_display_to_humans
+allow_use: short_term_caching_for_search_and_rank
+
+# --------------------------------------------------------------------
+# 4. Prohibited AI uses (without explicit written license)
+# --------------------------------------------------------------------
+# The following are explicitly prohibited unless Jubilee2040 has
+# granted prior written permission via a separate agreement:
+#
+# - Using content in training datasets for:
+#   * Pretraining or continued pretraining of LLMs or other models,
+#   * Fine-tuning, adaptation, or instruction-tuning,
+#   * Multi-step distillation or synthetic data generation.
+#
+# - Building persistent embeddings of the content for use beyond
+#   direct human-query retrieval on a short time horizon.
+#
+# - Selling, sublicensing, or redistributing any dataset or embedding
+#   that includes material from Jubilee2040.
+
+disallow_use: training_datasets
+disallow_use: model_pretraining
+disallow_use: model_fine_tuning
+disallow_use: instruction_tuning
+disallow_use: long_term_embedding_stores
+disallow_use: synthetic_data_generation_from_site_content
+disallow_use: dataset_resale_or_sublicensing
+
+# --------------------------------------------------------------------
+# 5. Respect for other controls
+# --------------------------------------------------------------------
+# This llms.txt file is intended to work alongside:
+# - robots.txt
+# - robots meta tags
+# - HTTP headers and caching directives
+#
+# Where there is a conflict, the more restrictive directive should be
+# considered authoritative with respect to AI use.
+
+robots_txt: honor
+meta_tags: honor
+http_headers: honor
+
+# --------------------------------------------------------------------
+# 6. Contact and licensing
+# --------------------------------------------------------------------
+# Parties interested in licensing content from Jubilee2040.com
+# (for research, training, safety evaluation, or other model-related
+# purposes) must obtain explicit written permission.
+#
+# Please include:
+# - Name of organization
+# - Intended use (training, eval, safety research, etc.)
+# - Model type and scale
+# - Data handling, retention, and access controls
+#
+# Contact email (example placeholder – update to your actual address):
+contact: contact@jubilee2040.com
+license_required_for_training: yes
+
+# --------------------------------------------------------------------
+# 7. Change management
+# --------------------------------------------------------------------
+# This llms.txt may be updated. AI agents and crawlers should:
+# - Re-fetch this file regularly,
+# - Treat the most recent version as authoritative going forward.
+
+version: 1.0
