@@ -362,11 +362,30 @@
                 font-size: 1.05em;
             }
         }
-      .site-footer .footer-content {
-         max-width: 100%;
-         margin: 0 auto;
-         text-align: center;
-       }
+.site-footer {
+    margin-left: -60px;
+    margin-right: -60px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+@media (max-width: 1024px) {
+    .site-footer {
+        margin-left: -40px;
+        margin-right: -40px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
       
     </style>
 </head>
@@ -627,11 +646,7 @@
             </section>
             <!-- end timeline -->
 
-        </main>
-        <!-- end main content -->
-
-            <!-- ===== FOOTER ===== -->
-            <footer class="site-footer">
+                      <footer class="site-footer">
                 <div class="footer-content">
                     <p class="footer-title"><strong>Jubilee2040.com</strong></p>
                     <p>The Tretter Chronology © 2025 Paul Tretter. All rights reserved.</p>
@@ -643,6 +658,12 @@
                     </nav>
                 </div>
             </footer>
+
+        </main>
+        <!-- end main content -->
+
+            <!-- ===== FOOTER ===== -->
+
       
     </div><!-- end .container -->
 </body>
