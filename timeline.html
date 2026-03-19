@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Tretter Chronology Timeline — key events from 3890 BC to 2040 AD, spanning Man's Dominion through the mathematically predicted Second Coming of Christ.">
+    <meta name="keywords" content="Tretter Chronology, biblical timeline, Jubilee 2040, ancient history timeline, Second Coming 2040, Exodus timeline, Temple timeline, Genesis 6:3">
+    <meta property="og:title" content="Biblical History Timeline | Jubilee2040.com">
+    <meta property="og:description" content="A chronological timeline of key biblical and historical events from 3890 BC to 2040 AD, as established by the Tretter Chronology.">
+    <meta property="og:url" content="https://jubilee2040.com/timeline.html">
+    <meta property="og:type" content="website">
+    <title>Timeline | The Tretter Chronology | Jubilee2040.com</title>
+    <link rel="stylesheet" href="https://jubilee2040.com/styles.css">
+    <style>
+        /* ===== TIMELINE LAYOUT ===== */
+
+        .timeline-wrapper {
+            position: relative;
+            padding: 20px 0 40px 0;
+        }
+
+        /* Vertical spine — pinned to left edge of wrapper */
+        .timeline-spine {
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #d4af37 0%, rgba(212,175,55,0.3) 100%);
+            border-radius: 2px;
+        }
+
+        /* ===== EVENT ITEMS ===== */
+
+        .timeline-item {
+            position: relative;
+            margin-left: 48px;
+            margin-bottom: 32px;
+        }
+
+        /* Circle marker — centered on the spine (spine left=10, width=3 → center=11.5px; circle width=14, so left = 11.5 - 7 = 4.5 ≈ 4px from wrapper) */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -41px;
+            top: 14px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #d4af37;
+            border: 3px solid #1a1a2e;
+            box-shadow: 0 0 8px rgba(212,175,55,0.6);
+            z-index: 1;
+        }
+
+        /* Connector line */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -27px;
+            top: 20px;
+            width: 27px;
+            height: 2px;
+            background: rgba(212,175,55,0.45);
+        }
+
+        .timeline-item.anchor-start::before {
+            background: #fff;
+            box-shadow: 0 0 12px rgba(255,255,255,0.7);
+            width: 18px;
+            height: 18px;
+            left: -43px;
+            top: 12px;
+        }
+
+        .timeline-item.anchor-end::before {
+            background: #d4af37;
+            box-shadow: 0 0 16px rgba(212,175,55,1);
+            width: 18px;
+            height: 18px;
+            left: -43px;
+            top: 12px;
+            animation: pulse-gold 2s infinite;
+        }
+
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 8px rgba(212,175,55,0.6); }
+            50%       { box-shadow: 0 0 22px rgba(212,175,55,1); }
+        }
+
+        /* ===== EVENT CARDS ===== */
+
+        .timeline-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 7px;
+            padding: 16px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-card:hover {
+            background: rgba(212, 175, 55, 0.07);
+            border-color: #d4af37;
+            transform: translateX(4px);
+        }
+
+        .timeline-year {
+            font-size: 0.8em;
+            font-weight: bold;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 4px;
+        }
+
+        .timeline-event {
+            font-size: 1.05em;
+            color: #e8e8e8;
+            font-family: 'Georgia', serif;
+            line-height: 1.4;
+        }
+
+        .timeline-item.anchor-end .timeline-card {
+            border-color: rgba(212,175,55,0.6);
+            background: rgba(212,175,55,0.08);
+        }
+
+        .timeline-item.anchor-end .timeline-event {
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        /* ===== JUBILEE MARKERS ===== */
+
+        .jubilee-marker {
+            position: relative;
+            margin-left: 48px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-height: 20px;
+        }
+
+        /* Diamond — centered on the same spine line as circles */
+        .jubilee-marker::before {
+            content: '';
+            position: absolute;
+            left: -43px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            width: 12px;
+            height: 12px;
+            background: transparent;
+            border: 2px solid rgba(212,175,55,0.55);
+            z-index: 1;
+        }
+
+        /* Connector */
+        .jubilee-marker::after {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 29px;
+            height: 1px;
+            background: rgba(212,175,55,0.25);
+        }
+
+        .jubilee-marker-year {
+            font-size: 0.76em;
+            font-weight: bold;
+            color: rgba(212,175,55,0.65);
+            letter-spacing: 1px;
+            min-width: 68px;
+        }
+
+        .jubilee-marker-label {
+            font-size: 0.76em;
+            color: rgba(212,175,55,0.45);
+            font-style: italic;
+        }
+
+        /* ===== COINCIDENT: event card that IS a 10th Jubilee ===== */
+
+        .timeline-item.is-jubilee .timeline-card {
+            border-color: rgba(212,175,55,0.5);
+            background: rgba(212,175,55,0.06);
+        }
+
+        .jubilee-badge {
+            display: inline-block;
+            font-size: 0.72em;
+            font-weight: bold;
+            color: #1a1a2e;
+            background: #d4af37;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-left: 8px;
+            vertical-align: middle;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== ERA DIVIDERS ===== */
+
+        .timeline-era {
+            margin-left: 48px;
+            margin-bottom: 26px;
+            margin-top: 8px;
+        }
+
+        .timeline-era-label {
+            display: inline-block;
+            font-size: 0.74em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #1a1a2e;
+            background: #d4af37;
+            padding: 4px 14px;
+            border-radius: 3px;
+        }
+
+        /* ===== INTRO & SPAN ===== */
+
+        .timeline-intro {
+            background: rgba(212,175,55,0.08);
+            border-left: 4px solid #d4af37;
+            border-radius: 0 6px 6px 0;
+            padding: 18px 22px;
+            margin-bottom: 24px;
+            font-size: 1.05em;
+            color: #e8e8e8;
+            line-height: 1.7;
+        }
+
+        .timeline-span {
+            text-align: center;
+            color: #b8b8b8;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .timeline-span strong {
+            color: #d4af37;
+        }
+
+        /* ===== GENESIS 6:3 CALLOUT ===== */
+
+        .genesis-callout {
+            background: rgba(212,175,55,0.1);
+            border: 2px solid rgba(212,175,55,0.5);
+            border-radius: 8px;
+            padding: 22px 26px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .genesis-callout .verse-ref {
+            font-size: 0.78em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .genesis-callout blockquote {
+            font-size: 1.15em;
+            font-style: italic;
+            color: #e8e8e8;
+            line-height: 1.7;
+            margin: 0 0 14px 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .genesis-callout .verse-note {
+            font-size: 0.9em;
+            color: #b8b8b8;
+            line-height: 1.6;
+        }
+
+        .genesis-callout .verse-note strong {
+            color: #d4af37;
+        }
+
+        /* ===== RESPONSIVE ===== */
+
+        @media (max-width: 768px) {
+            .timeline-item,
+            .jubilee-marker,
+            .timeline-era {
+                margin-left: 38px;
+            }
+
+            .timeline-item::before {
+                left: -31px;
+                width: 12px;
+                height: 12px;
+                top: 14px;
+            }
+
+            .timeline-item.anchor-start::before,
+            .timeline-item.anchor-end::before {
+                left: -33px;
+                width: 14px;
+                height: 14px;
+            }
+
+            .timeline-item::after {
+                left: -19px;
+                width: 19px;
+            }
+
+            .jubilee-marker::before {
+                left: -33px;
+                width: 10px;
+                height: 10px;
+            }
+
+            .jubilee-marker::after {
+                left: -21px;
+                width: 21px;
+            }
+
+            .timeline-spine {
+                left: 7px;
+            }
+
+            .timeline-card {
+                padding: 13px 15px;
+            }
+
+            .timeline-event {
+                font-size: 0.98em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .timeline-card {
+                padding: 11px 13px;
+            }
+
+            .timeline-event {
+                font-size: 0.93em;
+            }
+
+            .genesis-callout blockquote {
+                font-size: 1.05em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ===== SIDEBAR ===== -->
+        <nav class="sidebar" aria-label="Site navigation">
+            <div class="sidebar-header">
+                <h2><a href="https://jubilee2040.com/index.html" class="site-title">Jubilee2040</a></h2>
+                <p class="author">by Paul Tretter</p>
+            </div>
+
+            <div class="nav-section-title">The Proof</div>
+            <ul class="nav-menu">
+                <li><a href="https://jubilee2040.com/index.html">Home</a></li>
+                <li><a href="https://jubilee2040.com/01-priestly-courses.html">1. The Priestly Courses</a></li>
+                <li><a href="https://jubilee2040.com/02-jubilee-cycles.html">2. The Jubilee Cycles</a></li>
+                <li><a href="https://jubilee2040.com/03-supporting-clocks.html">3. The Supporting Clocks</a></li>
+                <li><a href="https://jubilee2040.com/04-480-paradox.html">4. The 480-Year Paradox</a></li>
+                <li><a href="https://jubilee2040.com/05-ptolemaic-error.html">5. The Ptolemaic Error</a></li>
+                <li><a href="https://jubilee2040.com/06-astronomical-kill-shot.html">6. The Astronomical Kill Shot</a></li>
+                <li><a href="https://jubilee2040.com/07-broken-compasses.html">7. The Broken Compasses</a></li>
+                <li><a href="https://jubilee2040.com/08-bayesian-verdict.html">8. The Bayesian Verdict</a></li>
+                <li><a href="https://jubilee2040.com/09-pentecost-countdown.html">9. The Pentecost Countdown</a></li>
+                <li><a href="https://jubilee2040.com/10-final-calculation.html">10. The Final Calculation</a></li>
+                <li><a href="https://jubilee2040.com/11-ultimate-so-what.html">11. The Ultimate "So What"</a></li>
+                <li><a href="https://jubilee2040.com/12-final-validation.html">12. The Final Validation</a></li>
+            </ul>
+
+            <div class="nav-section-title">Resources</div>
+            <ul class="nav-menu">
+                <li><a href="https://jubilee2040.com/papers/">📄 Research Papers</a></li>
+                <li><a href="https://jubilee2040.com/links/">🔗 Other Links</a></li>
+            </ul>
+
+            <div class="nav-section-title">Timeline</div>
+            <ul class="nav-menu">
+                <li><a href="https://jubilee2040.com/timeline.html" class="active">📅 Master Timeline</a></li>
+            </ul>
+
+            <div class="utilities-section">
+                <div class="utilities-title">Utilities</div>
+                <ul class="utilities-menu">
+                    <li><a href="https://jubilee2040.com/priestly-course-calculator.html">⚙️ Priestly Course Calculator</a></li>
+                    <li><a href="https://jubilee2040.com/calculator.html">🎺 Jubilee Calculator</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end sidebar -->
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main-content content-page" id="main-content">
+
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="https://jubilee2040.com/index.html">Home</a>
+                <span>›</span>
+                <span>Timeline</span>
+            </nav>
+
+            <h1>Master Timeline</h1>
+
+            <p class="timeline-intro">
+                The following timeline reflects the key chronological anchors of the Tretter Chronology — a mathematically validated framework that resets the conventional timeline of ancient history. Each event is placed according to the precise, interlocking calendar system derived from the Priestly Courses, Jubilee Cycles, and astronomical verification described throughout this site. Every 10th Jubilee (490-year interval) is marked. Three of those markers coincide exactly with named events, which is noted inline.
+            </p>
+
+            <!-- ===== GENESIS 6:3 CALLOUT ===== -->
+            <aside class="genesis-callout" aria-label="Genesis 6:3">
+                <div class="verse-ref">Genesis 6:3</div>
+                <blockquote>
+                    "And the LORD said, My spirit shall not always strive with man, for that he also is flesh: yet his days shall be an hundred and twenty years."
+                </blockquote>
+                <p class="verse-note">
+                    The <strong>120 years</strong> of this verse are interpreted within the Tretter Chronology as <strong>120 Jubilee cycles</strong> (120 × 49 = <strong>5,880 years</strong>) — the full span of Man's dominion over the earth. That period runs from <strong>3890 BC to 1991 AD</strong>. Man receives 120 Jubilees, not the 121st. The 121st Jubilee (2040 AD) belongs to Christ alone.
+                </p>
+            </aside>
+
+            <p class="timeline-span">
+                Man's Dominion: <strong>3890 BC → 1991 AD</strong> &nbsp;|&nbsp; <strong>5,880 years</strong> &nbsp;|&nbsp; <strong>120 Jubilee cycles</strong>
+                <br>
+                <span style="font-size:0.85em;">The 121st Jubilee (2040 AD) marks the 2nd Coming of Christ</span>
+            </p>
+
+            <!-- ===== TIMELINE ===== -->
+            <section class="timeline-wrapper" aria-label="Historical timeline">
+
+                <!-- Actual spine element for precise alignment control -->
+                <div class="timeline-spine" aria-hidden="true"></div>
+
+                <!-- OLD TESTAMENT ERA -->
+                <div class="timeline-era">
+                    <span class="timeline-era-label">Old Testament Era</span>
+                </div>
+
+                <!-- 3890 BC: Man's Dominion Begins -->
+                <article class="timeline-item anchor-start">
+                    <div class="timeline-card">
+                        <div class="timeline-year">3890 BC</div>
+                        <div class="timeline-event">Man's Dominion Begins</div>
+                    </div>
+                </article>
+
+                <!-- Jubilee 10: 3400 BC -->
+                <div class="jubilee-marker" aria-label="Jubilee 10">
+                    <span class="jubilee-marker-year">3400 BC</span>
+                    <span class="jubilee-marker-label">Jubilee 10</span>
+                </div>
+
+                <!-- Jubilee 20: 2910 BC -->
+                <div class="jubilee-marker" aria-label="Jubilee 20">
+                    <span class="jubilee-marker-year">2910 BC</span>
+                    <span class="jubilee-marker-label">Jubilee 20</span>
+                </div>
+
+                <!-- Jubilee 30: 2420 BC -->
+                <div class="jubilee-marker" aria-label="Jubilee 30">
+                    <span class="jubilee-marker-year">2420 BC</span>
+                    <span class="jubilee-marker-label">Jubilee 30</span>
+                </div>
+
+                <!-- Jubilee 40: 1930 BC -->
+                <div class="jubilee-marker" aria-label="Jubilee 40">
+                    <span class="jubilee-marker-year">1930 BC</span>
+                    <span class="jubilee-marker-label">Jubilee 40</span>
+                </div>
+
+                <!-- 1479 BC: Exodus Begins -->
+                <article class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-year">1479 BC</div>
+                        <div class="timeline-event">Exodus Begins</div>
+                    </div>
+                </article>
+
+                <!-- Jubilee 50: 1440 BC -->
+                <div class="jubilee-marker" aria-label="Jubilee 50">
+                    <span class="jubilee-marker-year">1440 BC</span>
+                    <span class="jubilee-marker-label">Jubilee 50</span>
+                </div>
+
+                <!-- 950 BC: Dedication of 1st Temple — IS Jubilee 60 -->
+                <article class="timeline-item is-jubilee">
+                    <div class="timeline-card">
+                        <div class="timeline-year">950 BC <span class="jubilee-badge">Jubilee 60</span></div>
+                        <div class="timeline-event">Dedication of the 1st Temple</div>
+                    </div>
+                </article>
+
+                <!-- 919 BC: Divided Kingdom Begins -->
+                <article class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-year">919 BC</div>
+                        <div class="timeline-event">Divided Kingdom Begins</div>
+                    </div>
+                </article>
+
+                <!-- 657 BC: Hezekiah Miracle -->
+                <article class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-year">657 BC</div>
+                        <div class="timeline-event">Hezekiah Miracle</div>
+                    </div>
+                </article>
+
+                <!-- 530 BC: Destruction of 1st Temple -->
+                <article class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-year">530 BC</div>
+                        <div class="timeline-event">Destruction of the 1st Temple</div>
+                    </div>
+                </article>
+
+                <!-- 460 BC: Dedication of 2nd Temple — IS Jubilee 70 -->
+                <article class="timeline-item is-jubilee">
+                    <div class="timeline-card">
+                        <div class="timeline-year">460 BC <span class="jubilee-badge">Jubilee 70</span></div>
+                        <div class="timeline-event">Dedication of the 2nd Temple</div>
+                    </div>
+                </article>
+
+                <!-- NEW TESTAMENT ERA -->
+                <div class="timeline-era">
+                    <span class="timeline-era-label">New Testament Era</span>
+                </div>
+
+                <!-- 4 BC: Zacharias Visited by Gabriel -->
+                <article class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-year">4 BC</div>
+                        <div class="timeline-event">Zacharias Visited by Gabriel</div>
+                    </div>
+                </article>
+
+                <!-- 3 BC: Jesus Born -->
+                <article class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-year">3 BC</div>
+                        <div class="timeline-event">Jesus Born (Feast of Lights)</div>
+                    </div>
+                </article>
+
+                <!-- 31 AD: Crucifixion/Resurrection — IS Jubilee 80 -->
+                <article class="timeline-item is-jubilee">
+                    <div class="timeline-card">
+                        <div class="timeline-year">31 AD <span class="jubilee-badge">Jubilee 80</span></div>
+                        <div class="timeline-event">Jesus — Crucifixion &amp; Resurrection</div>
+                    </div>
+                </article>
+
+                <!-- 70 AD: Destruction of 2nd Temple -->
+                <article class="timeline-item">
+                    <div class="timeline-card">
+                        <div class="timeline-year">70 AD</div>
+                        <div class="timeline-event">Destruction of the 2nd Temple</div>
+                    </div>
+                </article>
+
+                <!-- Jubilee 90: 521 AD -->
+                <div class="jubilee-marker" aria-label="Jubilee 90">
+                    <span class="jubilee-marker-year">521 AD</span>
+                    <span class="jubilee-marker-label">Jubilee 90</span>
+                </div>
+
+                <!-- Jubilee 100: 1011 AD -->
+                <div class="jubilee-marker" aria-label="Jubilee 100">
+                    <span class="jubilee-marker-year">1011 AD</span>
+                    <span class="jubilee-marker-label">Jubilee 100</span>
+                </div>
+
+                <!-- Jubilee 110: 1501 AD -->
+                <div class="jubilee-marker" aria-label="Jubilee 110">
+                    <span class="jubilee-marker-year">1501 AD</span>
+                    <span class="jubilee-marker-label">Jubilee 110</span>
+                </div>
+
+                <!-- Jubilee 120: 1991 AD — End of Man's Dominion -->
+                <article class="timeline-item anchor-start" style="--dot-color:#d4af37;">
+                    <div class="timeline-card" style="border-color:rgba(212,175,55,0.6); background:rgba(212,175,55,0.07);">
+                        <div class="timeline-year">1991 AD <span class="jubilee-badge">Jubilee 120</span></div>
+                        <div class="timeline-event" style="color:#d4af37;">End of Man's Dominion &mdash; Genesis 6:3</div>
+                    </div>
+                </article>
+
+                <!-- PROPHETIC ERA -->
+                <div class="timeline-era">
+                    <span class="timeline-era-label">Prophetic Endpoint</span>
+                </div>
+
+                <!-- 2040 AD: 2nd Coming — Jubilee 121 -->
+                <article class="timeline-item anchor-end">
+                    <div class="timeline-card">
+                        <div class="timeline-year">2040 AD <span class="jubilee-badge">Jubilee 121</span></div>
+                        <div class="timeline-event">2nd Coming of Christ</div>
+                    </div>
+                </article>
+
+            </section>
+            <!-- end timeline -->
+
+            <!-- ===== FOOTER ===== -->
+            <footer class="site-footer">
+                <div class="footer-content">
+                    <div class="footer-title">Jubilee2040.com</div>
+                    <p>The Tretter Chronology &copy; 2025 Paul Tretter. All rights reserved.</p>
+                    <p>For inquiries: <a href="mailto:contact@jubilee2040.com">contact@jubilee2040.com</a></p>
+                    <div class="footer-nav">
+                        <a href="https://jubilee2040.com/index.html">Home</a> |
+                        <a href="https://jubilee2040.com/01-priestly-courses.html">Start Tour</a> |
+                        <a href="https://jubilee2040.com/about.html">About</a> |
+                        <a href="https://jubilee2040.com/timeline.html">Timeline</a>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+        <!-- end main content -->
+
+    </div><!-- end .container -->
+</body>
+</html>
