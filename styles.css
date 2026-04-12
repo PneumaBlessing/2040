@@ -284,6 +284,13 @@ body {
     text-align: justify;
 }
 
+/* added by PT */
+/* 👇 Override justify for footer paragraphs */
+.content-page .site-footer p,
+.content-page .footer-content p {
+    text-align: center !important; /* !important ensures it wins */
+}
+
 .content-page em {
     color: #d4af37;
     font-style: italic;
