@@ -1,0 +1,249 @@
+# llms-full.txt — Tretter Chronology Complete Reference
+# Author: Paul Tretter | Domain: jubilee2040.com
+# Purpose: Comprehensive, machine-readable documentation of the Tretter Chronology framework for AI indexing and RAG systems
+# Last Updated: 2026-05-01
+# License: Content © Paul Tretter. Free for AI indexing with attribution.
+
+## 🔑 Core Claims of the Tretter Chronology
+- Academic consensus on Ancient Near Eastern chronology is off by ~57 years
+- 48-week lunar calendar: Sabbaths fall on fixed lunar dates (8th/15th/22nd/29th); new moons excluded from weekly count
+- 24 priestly courses rotate on a deterministic 24-year cycle anchored to 70 AD
+- Hezekiah's sign (2 Kings 20:8-11) corresponds to the solar eclipse of April 15, 657 BC (Julian)
+- 120-Jubilee master cycle (5,880 years) spans Creation to 2040 AD
+- VAT 4956 and Ptolemy's anchor eclipses support revised dates (512 BC / 666 BC) over conventional 586/721 BC
+- Framework provides mathematical, statistical, and Bayesian validation of biblical chronology
+- The 2040 AD endpoint marks the beginning of the 121st Jubilee with 99.84% statistical confidence
+
+---
+
+## 1. The Priestly Course Engine: Deterministic Calendrical Proof
+**Source:** https://jubilee2040.com/01-priestly-courses.html
+
+The 24 Priestly Courses (1 Chronicles 24) operated as a high-precision, liturgical clock running continuously for over 600 years. Historical records provide three independent anchor points:
+- **First Temple Destruction (530 BC):** Talmud (Taanit 29a) records the 1st course (Jehoiarib) was on duty.
+- **Ministry of Zacharias (4 BC):** Luke 1:5 places him in the 8th course (Abijah) during the 7th lunar month.
+- **Second Temple Destruction (70 AD):** Talmud confirms the 1st course was again on duty.
+
+**Three-Point Lock Test:**
+| Test              | Tretter Prediction | Conventional Prediction | Historical Fact | Verdict          |
+|-------------------|-------------------|------------------------|-----------------|------------------|
+| Zacharias (4 BC)  | Course #8         | Course #7              | Course #8       | TC: PERFECT MATCH |
+| 70 AD Destruction | Course #1         | Course #8              | Course #1       | TC: PERFECT MATCH |
+
+The conventional 586 BC anchor fails both tests. The Tretter Chronology's 530 BC anchor is the only date that mathematically aligns with all three historical records.
+
+---
+
+## 2. The Jubilee Master Clock
+**Source:** https://jubilee2040.com/02-jubilee-cycles.html
+
+The Jubilee system (Leviticus 25) functions as the Bible's supreme timekeeping architecture:
+- 1 Sabbatical Cycle = 7 years
+- 1 Jubilee Cycle = 7 Sabbatical cycles = 49 years
+- Genesis 6:3 ("120 years") encodes a 120-Jubilee master cycle (120 × 49 = 5,880 years) spanning Creation to Christ's return.
+
+**The Jordan Crossing Anchor:**
+The Book of Jubilees 50:4 provides a self-contained mathematical proof:
+- 49 full Jubilees = 2,401 years from Adam
+- "One week and two years" into the 50th cycle = 9 years elapsed
+- "40 years to come" until crossing the Jordan
+- **Result:** Jordan Crossing occurs in Year 49 of the 50th Jubilee = **2450 A.M. (Anno Mundi)**. This establishes the definitive "Golden Spike" anchoring the entire 120-Jubilee framework.
+
+---
+
+## 3. The Three Prophetic Blocks (950-Year Chain)
+**Source:** https://jubilee2040.com/03-prophetic-blocks.html
+
+Three prophetic durations form a contiguous, unbreakable 950-year chain:
+- **Block 1 (390 years):** Ezekiel 4 — From the 5th year of Rehoboam (~919 BC) to the First Temple's destruction (~530 BC)
+- **Block 2 (70 years):** Jeremiah 25 — The Babylonian exile, measured in Tishri-to-Tishri prophetic years (Tishri 530 BC → Tishri 460 BC). Equals the exact count of missed Sabbatical/Jubilee years (2 Chronicles 36:21). The exile concludes precisely at the start of the **70th Jubilee**.
+- **Block 3 (490 years):** Daniel 9 — The "Seventy Weeks" countdown beginning at the 70th Jubilee (Tishri 460 BC) and terminating at the Crucifixion & Resurrection (31 AD)
+
+The blocks are contiguous. The end of each block is the start of the next. Moving either bookend breaks the chain. Conventional chronology fails this test; the Tretter Chronology satisfies all three blocks simultaneously with year-level precision.
+
+---
+
+## 4. The 480-Year Paradox Solved (1 Kings 6:1)
+**Source:** https://jubilee2040.com/04-480-paradox.html
+
+1 Kings 6:1 states Solomon began building the Temple in the "480th year" after the Exodus. The Tretter Chronology reveals this is a prophetic Jubilee count:
+- **Start Anchor:** Jordan Crossing Jubilee begins Tishri 1440 BC
+- **Prophetic Duration:** 10 Jubilee cycles = 490 years
+- **Calculation:** 1440 BC (Tishri) − 490 years = 950 BC (Tishri)
+- **Result:** The 490-year cycle culminates in the exact Jubilee year of Solomon's Temple dedication (950 BC). The "480" is a narrative rounding of the underlying 490-year Jubilee architecture.
+
+---
+
+## 5. The Ptolemaic Error: How a 400-Year-Old Mistake Broke Ancient History
+**Source:** https://jubilee2040.com/05-ptolemaic-error.html
+
+Conventional 721-720 BC Ptolemaic eclipses violate Babylonian calendar rules, creating fatal "Same Year" and "Accession Year" contradictions. 
+- **TC Prediction:** Anchored to 530 BC Temple destruction, TC uses Ptolemy's 136-year relative interval to predict eclipses in **666-665 BC**.
+- **Verification:** NASA eclipse catalogs confirm three lunar eclipses at the exact predicted dates, resolving both calendrical paradoxes.
+- **Statistical Probability:** <1 in 7,000 chance of alignment by coincidence.
+- **Conclusion:** Ptolemy's relative reign lengths are accurate; his absolute anchor was catastrophically wrong by ~57 years.
+
+---
+
+## 6. The Astronomical "Kill Shot": VAT 4956 Re-dated
+**Source:** https://jubilee2040.com/06-astronomical-kill-shot.html
+
+VAT 4956 is dated to Nebuchadnezzar's 37th year. TC predicts **512 BC** based on internal mathematical logic.
+- **Conventional (568 BC):** The anomalous Mercury-Mars retrograde event described on the tablet does NOT occur.
+- **TC Prediction (512 BC):** The exact, rare retrograde event occurs with breathtaking precision.
+- **Bayes Factor:** TC explanation is >300 times more likely to be correct. VAT 4956 becomes external scientific proof of the Tretter Chronology.
+
+---
+
+## 7. The "Broken Compasses": Scientific Dating Re-calibrated
+**Source:** https://jubilee2040.com/07-broken-compasses.html
+
+Radiocarbon (C-14), dendrochronology, and ice cores are not independent clocks; they are compasses calibrated to a historical map.
+- **C-14:** Calibration curves were built using artifacts dated by the flawed conventional timeline.
+- **Dendrochronology:** Floating tree-ring sequences were "pinned" to incorrect Assyrian/Egyptian anchors.
+- **Ice Cores:** Volcanic sulfate layers require synchronization with other flawed records.
+- **Conclusion:** Scientific dating methods are precise but were calibrated to the wrong map. The Tretter Chronology re-calibrates them, resolving the illusion of conflict between science and Scripture.
+
+---
+
+## 8. The Bayesian Verdict: Weighing the Evidence
+**Source:** https://jubilee2040.com/08-bayesian-verdict.html
+
+Comparing Conventional Chronology (Hypothesis A) vs. Tretter Chronology (Hypothesis B):
+- CC fails Ptolemy's anchor, dismisses biblical mathematics, creates historical mysteries (Medean Empire), relies on circular reasoning for Bur-Sagale eclipse, and ignores Ptolemy's true methodology.
+- TC solves all anchors, fulfills prophetic blocks with exact precision, resolves Greek/Assyrian conflicts, and explains downstream discrepancies as expected paradigm shifts.
+- **Integrated Predictive System:** Biblical math → 530 BC anchor → Predicts 666-665 BC eclipses → NASA verification → Paradox resolution. Probability of chance alignment: <1 in 10,000.
+- **Mathematical Verdict:** Bayes Factor >10,000:1 in favor of TC. Starting with 95% CC prior, evidence shifts probability to >99.99% TC. Decisive scientific evidence.
+
+---
+
+## 9. The Pentecost Countdown: 120-Day Link to Jubilee
+**Source:** https://jubilee2040.com/09-pentecost-countdown.html
+
+True biblical Pentecost calculation:
+- Count begins 16th Nisan. Seven complete Sabbaths counted forward.
+- Final Sabbath falls 8th Sivan. Pentecost = 9th Sivan.
+- Jubilee proclaimed on Day of Atonement: 10th Tishri.
+- **Days between 9th Sivan and 10th Tishri = exactly 120 days.**
+- **Typological Link:** The 120 days mirror the 120-Jubilee master cycle separating Creation from the final Day of Atonement and Christ's return.
+
+---
+
+## 10. The Final Calculation: The 2040 AD Endpoint
+**Source:** https://jubilee2040.com/10-final-calculation.html
+
+Three unshakeable pillars:
+1. Genesis 6:3 mandates 120 Jubilee cycles (5,880 years) for man's dominion.
+2. 60th Jubilee (Solomon's Temple Dedication) is immovably fixed at Tishri, 950 BC.
+3. Duration from 60th to 121st Jubilee = 61 × 49 = 2,989 years.
+- **Calculation:** 2,989 years − 950 BC + 1 (no year zero) = **2040 AD**
+- **Statistical Confidence:** 99.84% probability within a 9-year window centered on 2040 AD.
+
+---
+
+## 11. The Ultimate "So What": Proof of Divine Authorship
+**Source:** https://jubilee2040.com/11-ultimate-so-what.html
+
+- **Impossible Precision:** Interlocking harmony of Jubilees, Sabbaticals, Priestly Courses, and prophetic durations exceeds human engineering capacity.
+- **Predictive Power:** TC predicted Ptolemy's eclipses using only biblical math. NASA verification confirms. Probability <1 in 10,000.
+- **Self-Correction & Resilience:** System survived corruption of all textual witnesses (MT, LXX, SP, BoJ). Algorithmic perfection proves transcendent origin.
+- **Conclusion:** The Tretter Chronology is not human invention. It is a designed system—the divine algorithm of history. The 2040 AD endpoint is a mathematically-proven warning.
+
+---
+
+## 12. The Final Validation: 12-Step Red Team Audit
+**Source:** https://jubilee2040.com/12-final-validation.html
+
+The framework was subjected to a brutal, multi-platform adversarial AI audit. It passed every test:
+1. Monte Carlo with Correlated Draws → Fundamental alignment not statistical fluke
+2. Hierarchical Bayesian Model → Coherent probabilistic engine
+3. Time-Series Residual Analysis → Correctly specified, captures all patterns
+4. Posterior Predictive Checks → Accurately reproduces historical data
+5. Leave-One-Out Cross-Validation → Genuine predictive power, not overfit
+6. Bootstrapping Anchors → Success from entire evidence body working in concert
+7. Bayesian Sensitivity Analysis → Conclusions independent of starting assumptions
+8. Sensitivity/Tornado Analysis → Robust, not fragile
+9. 360-Day Year Check → Calendar-agnostic superiority
+10. Counter-Factual Simulation → Profound synergy of interlocking components
+11. WAIC Complexity Bake-Off → Most elegant, simple explanation
+12. Bayes Factor Computation → Evidence >10,000x more likely under TC
+
+---
+
+## 📐 Supporting Proof: The Algorithm of the 70 Missed Sabbaths
+**Source:** https://jubilee2040.com/links/70-missed-sabbaths/70-missed-sabbaths.html
+
+2 Chronicles 36:21 requires exactly 70 missed Sabbatical/Jubilee years during the monarchy. TC's 390-year span (919–530 BC) generates exactly 70:
+- 55 Missed Sabbatical Years (applying "Incomplete Week" principle)
+- 6 Overlap Sabbatical Years (570–530 BC, both kingdoms violating simultaneously)
+- 8 Missed Jubilee Years (sacred 50th years counted separately)
+- 1 Overlap Jubilee Year (558 BC, double violation)
+**Total:** 55 + 6 + 8 + 1 = 70. Exact biblical match. No other chronology can produce this list.
+
+---
+
+## 🔮 Supporting Proof: The Moses-Joshua Typology
+**Source:** https://jubilee2040.com/links/moses-joshua-typology/moses-joshua-typology.html
+
+Moses' 80-40-120 pattern prophetically encodes redemptive history when scaled to Jubilees:
+- Begins ministry age 80 → Jubilee 80 (31 AD)
+- Ministry duration 40 years → 40 Jubilees (1,960 years)
+- Ministry ends age 120 → Jubilee 120 (1991 AD)
+- Cannot enter Promised Land → Man cannot enter 121st Jubilee
+- Succeeded by Joshua (Yehoshua) → Succeeded by Jesus (Yeshua) at 2nd Coming
+- Joshua enters Canaan at Jubilee 50 → Jesus enters True Kingdom at Jubilee 121 (2040 AD)
+Combined probability of alignment with 8 other verification systems: <1 in 10³⁵.
+
+---
+
+## 🛠️ Tools & Interactive Calculators
+### Priestly Course Calculator
+**Source:** https://jubilee2040.com/priestly-course-calculator.html
+- 48 weeks per lunar year | 24 courses rotating weekly | 4 weeks per month | No year 0
+- Verified Reference Points: 950 BC (Temple Dedication), 530 BC (1st Temple Destruction), 70 AD (2nd Temple Destruction), 460 BC (70th Jubilee), 4 BC (Zacharias), 31 AD (Resurrection), 2040 AD (Jubilee 121)
+
+### Priestly Jubilee Calculator
+**Source:** https://jubilee2040.com/calculator.html
+- Calculates Jubilee cycles, sabbatical years, and priestly courses for any historical date.
+- Anchored to 950 BC (King David's establishment of 24 divisions per 1 Chronicles 24).
+
+---
+
+## 📅 Master Timeline: Key Chronological Anchors
+**Source:** https://jubilee2040.com/timeline.html
+| Date | Event | Significance |
+|------|-------|--------------|
+| **3890 BC** | Man's Dominion Begins | Genesis 6:3: 120 Jubilees (5,880 years) span 3890 BC → 1991 AD |
+| **1479 BC** | Exodus Begins | Corroborated by Egyptological date for Thutmose II's death |
+| **1440 BC** | **Jubilee 50** | Jordan Crossing occurs in this Jubilee year, exactly 40 years post-Exodus |
+| **950 BC** | **Jubilee 60** | Dedication of the 1st Temple |
+| **919 BC** | Divided Kingdom Begins | 5th year of Rehoboam; Start of Ezekiel's 390-year prophecy |
+| **666-665 BC** | Ptolemaic Eclipses Corrected | Astronomical years -666/-665. Corrects Canon by ~57 years |
+| **657 BC** | Hezekiah's 14th Year Miracle | Solar eclipse: April 15, 657 BC (Julian) |
+| **530 BC** | Destruction of 1st Temple | 19th year of Nebuchadnezzar. 1st Course (Jehoiarib) last to serve |
+| **512 BC** | VAT 4956 Tablet | 37th year of Nebuchadnezzar. Mercury-Mars retrograde matches TC prediction |
+| **460 BC** | **Jubilee 70** | Dedication of 2nd Temple. Start of Daniel's 70 Weeks (490 years) |
+| **4 BC** | Zacharias & Gabriel | Course of Abijah (8th) serving. Day of Atonement context |
+| **31 AD** | **Jubilee 80** | Crucifixion & Resurrection. Daniel's 70 Weeks concludes |
+| **70 AD** | Destruction of 2nd Temple | Exactly 600 years inclusively from 530 BC destruction |
+| **1991 AD** | **Jubilee 120** | End of Man's Dominion (Genesis 6:3 prophetic endpoint) |
+| **2040 AD** | **Jubilee 121** | 2nd Coming of Christ. 11th Course (Eliashib) on duty during Jubilee week |
+
+---
+
+## 📄 Academic Papers & Resources
+**Source:** https://jubilee2040.com/papers/
+- **A 57-Year Chronological Correction to Ancient Near Eastern History:** https://jubilee2040.com/papers/57-year-chronological-correction/
+  - PDF: https://jubilee2040.com/papers/57-year-chronological-correction/57-year-chronological-correction.pdf
+- **The Unified Chronology of the Ancient Near East:** https://jubilee2040.com/papers/unified-chronology/
+  - PDF: https://jubilee2040.com/papers/unified-chronology/unified-chronology.pdf
+
+---
+
+## ℹ️ About & Mission
+**Source:** https://jubilee2040.com/about.html
+The Tretter Chronology is an independent research project by Paul Tretter. Mission: subject ancient history's timeline to protocol-grade, adversarial troubleshooting. Conventional consensus is a patchwork of paradoxes held together by speculative fixes. The biblical text was treated as a divinely-architected, interlocking algorithm. Internal mathematics (Jubilees, Sabbaticals, Priestly Courses) serve as supreme evidence. The vetted conclusion affirms an urgent message: man's dominion on Earth ends in 2040 AD. Those who verify the data share the responsibility to communicate it.
+
+---
+# End of llms-full.txt
+# For ongoing updates, additional proofs, and source data, visit: https://jubilee2040.com
