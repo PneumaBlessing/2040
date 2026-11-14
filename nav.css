@@ -1,0 +1,217 @@
+/* Jubilee2040.com - Shared site navigation
+   One component, used on every page:
+   - Phones & tablets (<1024px): sticky top bar + slide-in drawer
+   - Desktop (>=1024px) on pages with body.has-sidebar: permanent left sidebar
+   All selectors are namespaced so it can't collide with page-specific CSS. */
+
+:root {
+    --j-gold: #d4af37;
+    --j-gold-dim: #b8941f;
+    --j-ink: #1a1a2e;
+    --j-panel: #0f0f19;
+    --j-text: #e8e8e8;
+    --j-muted: #b8b8b8;
+    --j-bar-h: 56px;
+    --j-sidebar-w: 280px;
+}
+
+/* Keep anchor jumps (skip links, #hash links) from landing under the fixed bar */
+html { scroll-padding-top: calc(var(--j-bar-h) + 12px); }
+
+/* Comfortable tap size for the "<- Back" links used on the links/papers pages */
+.back-link { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* ===== TOP BAR ===== */
+.site-bar {
+    margin: 0;
+    max-width: none;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--j-bar-h);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 10px 0 6px;
+    box-sizing: border-box;
+    background: rgba(15, 15, 25, 0.97);
+    border-bottom: 2px solid var(--j-gold);
+    font-family: Georgia, 'Times New Roman', serif;
+}
+@supports (backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px)) {
+    .site-bar { background: rgba(15, 15, 25, 0.88); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+}
+.site-bar__toggle {
+    all: unset;                       /* ignore host-page button{} rules (calculators style bare <button>) */
+    box-sizing: border-box;
+    flex: none;
+    width: 48px; height: 48px; min-width: 0;
+    display: grid; place-items: center;
+    border-radius: 8px;
+    color: var(--j-gold);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.site-bar__toggle:active { background: rgba(212, 175, 55, 0.15); }
+.site-bar__toggle svg { display: block; }
+.site-bar__toggle line { stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; transform-box: fill-box; transform-origin: center; transition: transform .2s ease, opacity .2s ease; }
+.site-bar__toggle[aria-expanded="true"] .l1 { transform: translateY(6px) rotate(45deg); }
+.site-bar__toggle[aria-expanded="true"] .l2 { opacity: 0; }
+.site-bar__toggle[aria-expanded="true"] .l3 { transform: translateY(-6px) rotate(-45deg); }
+.site-bar__brand {
+    display: inline-flex; align-items: center;
+    min-height: 44px; padding: 0 6px;
+    margin-right: auto;
+    color: var(--j-gold);
+    font-weight: bold; font-size: 1.15rem; line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.site-bar__tour {
+    flex: none;
+    display: inline-flex; align-items: center;
+    min-height: 40px; padding: 0 14px;
+    color: var(--j-ink);
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    border-radius: 6px;
+    font-weight: bold; font-size: .9rem; line-height: 1;
+    text-decoration: none; white-space: nowrap;
+}
+
+/* Reserve room under the fixed bar */
+body.has-sidebar, body.has-site-bar { padding-top: var(--j-bar-h); }
+
+/* ===== OVERLAY ===== */
+.site-overlay {
+    position: fixed; inset: 0;
+    z-index: 1050;
+    background: rgba(0, 0, 0, 0.62);
+    opacity: 0; visibility: hidden;
+    transition: opacity .25s ease, visibility 0s linear .25s;
+}
+.site-overlay.is-visible { opacity: 1; visibility: visible; transition: opacity .25s ease; }
+
+/* ===== DRAWER / SIDEBAR ===== */
+.sidebar {
+    position: fixed;
+    top: 0; left: 0; bottom: 0;
+    width: min(86vw, 330px);
+    z-index: 1100;
+    box-sizing: border-box;
+    padding: 14px 14px 40px;
+    background: var(--j-panel);
+    border-right: 2px solid var(--j-gold);
+    box-shadow: 4px 0 18px rgba(0, 0, 0, 0.55);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--j-text);
+    line-height: 1.4;
+    transform: translateX(-102%);
+    visibility: hidden;                      /* closed drawer is not tabbable / announced */
+    transition: transform .25s ease, visibility 0s linear .25s;
+}
+.sidebar.is-open { transform: none; visibility: visible; transition: transform .25s ease; }
+
+.sidebar .sidebar-header { position: relative; margin-bottom: 14px; padding-right: 44px; }
+.sidebar h2 {
+    margin: 0 0 10px; padding: 0 0 10px;
+    color: var(--j-gold); font-size: 1.5rem; text-align: left;
+    border-bottom: 2px solid var(--j-gold);
+}
+.sidebar .site-title { color: var(--j-gold); text-decoration: none; }
+.sidebar .site-title:hover { color: #fff; }
+.sidebar .author { margin: 0; color: var(--j-muted); font-size: .9rem; font-style: italic; }
+
+.sidebar__close {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute; top: -4px; right: -6px;
+    width: 44px; height: 44px; min-width: 0;
+    display: grid; place-items: center;
+    border-radius: 8px;
+    color: var(--j-gold); font: 2rem/1 Georgia, serif; cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.sidebar .nav-section-title,
+.sidebar .utilities-title {
+    margin: 18px 0 6px; padding-left: 14px;
+    color: var(--j-gold); font-weight: bold; font-size: .85rem;
+    text-transform: uppercase; letter-spacing: 1px;
+}
+.sidebar .nav-menu,
+.sidebar .utilities-menu { list-style: none; margin: 0; padding: 0; }
+.sidebar .nav-menu li,
+.sidebar .utilities-menu li { margin: 0 0 2px; }
+.sidebar .nav-menu li.nav-section-title { margin-top: 18px; }
+
+.sidebar .nav-menu a,
+.sidebar .utilities-menu a {
+    display: flex; align-items: center;
+    min-height: 44px; padding: 10px 14px;
+    color: var(--j-muted); text-decoration: none;
+    font-size: 1rem; line-height: 1.3;
+    border-left: 3px solid transparent; border-radius: 5px;
+    -webkit-tap-highlight-color: transparent;
+}
+.sidebar .nav-menu a:active,
+.sidebar .utilities-menu a:active { background: rgba(212, 175, 55, 0.15); }
+.sidebar .nav-menu a.active,
+.sidebar .nav-menu a[aria-current="page"],
+.sidebar .utilities-menu a[aria-current="page"] {
+    background: rgba(212, 175, 55, 0.2);
+    color: var(--j-gold); border-left-color: var(--j-gold); font-weight: bold;
+}
+.sidebar .utilities-section { margin-top: 22px; padding-top: 6px; border-top: 2px solid rgba(212, 175, 55, 0.3); }
+
+@media (hover: hover) {
+    .sidebar .nav-menu a:hover,
+    .sidebar .utilities-menu a:hover {
+        background: rgba(212, 175, 55, 0.1); color: var(--j-gold); border-left-color: var(--j-gold);
+    }
+}
+
+html.nav-open, html.nav-open body { overflow: hidden; }
+
+/* Skip link */
+.skip-to-main {
+    position: absolute; left: 8px; top: -60px; z-index: 2000;
+    padding: 10px 16px; border-radius: 6px;
+    background: var(--j-gold); color: var(--j-ink); font-weight: bold; text-decoration: none;
+}
+.skip-to-main:focus { top: calc(var(--j-bar-h) + 8px); }
+
+.site-bar a:focus-visible, .site-bar button:focus-visible,
+.sidebar a:focus-visible, .sidebar button:focus-visible {
+    outline: 2px solid var(--j-gold); outline-offset: 2px;
+}
+
+/* ===== DESKTOP: permanent sidebar on pages that have one ===== */
+@media (min-width: 1024px) {
+    body.has-sidebar { padding-top: 0; }
+    body.has-sidebar .site-bar,
+    body.has-sidebar .site-overlay,
+    body.has-sidebar .sidebar__close { display: none; }
+    body.has-sidebar .sidebar {
+        width: var(--j-sidebar-w);
+        padding: 20px 20px 40px;
+        z-index: 10;
+        transform: none; visibility: visible; transition: none;
+    }
+    body.has-sidebar .sidebar .sidebar-header { padding-right: 0; }
+    body.has-sidebar .sidebar h2 { text-align: center; }
+    body.has-sidebar .sidebar .author { text-align: center; }
+    body.has-sidebar .sidebar .nav-menu a,
+    body.has-sidebar .sidebar .utilities-menu a { min-height: 40px; font-size: .95rem; }
+    html.nav-open, html.nav-open body { overflow: auto; }
+}
+
+@media (max-width: 360px) {
+    .site-bar__tour { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sidebar, .site-overlay, .site-bar__toggle line { transition: none !important; }
+}

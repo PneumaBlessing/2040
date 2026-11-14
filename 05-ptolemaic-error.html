@@ -50,62 +50,43 @@
     </script>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
 </head>
-<body>
+<body class="has-sidebar">
+    <a class="skip-to-main" href="#main-content">Skip to content</a>
+    <div class="site-bar" role="banner"><button class="site-bar__toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line class="l1" x1="4" y1="6" x2="20" y2="6"/><line class="l2" x1="4" y1="12" x2="20" y2="12"/><line class="l3" x1="4" y1="18" x2="20" y2="18"/></svg></button><a class="site-bar__brand" href="index.html">Jubilee 2040</a><a class="site-bar__tour" href="01-priestly-courses.html">Start tour</a></div><div class="site-overlay" aria-hidden="true"></div>
+    <noscript><style>.site-bar,.site-overlay,.sidebar__close{display:none}body.has-sidebar{padding-top:0}.sidebar{position:static;width:auto;transform:none;visibility:visible;box-shadow:none;border-right:0;border-bottom:2px solid #d4af37}@media(min-width:1024px){.sidebar{position:fixed;width:280px;border-bottom:0;border-right:2px solid #d4af37}}</style></noscript>
     <div class="container">
-        <nav class="sidebar" role="navigation" aria-label="Main navigation">
-            <div class="sidebar-header">
-                <h2><a href="index.html" class="site-title">Jubilee 2040</a></h2>
-                <p class="author">by Paul Tretter</p>
-            </div>
-
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-section-title">The Proof</li>
-                <li><a href="01-priestly-courses.html" class="nav-link">1. The Priestly Courses</a></li>
-                <li><a href="02-jubilee-cycles.html" class="nav-link">2. The Jubilee Cycles</a></li>
-                <li><a href="03-prophetic-blocks.html" class="nav-link">3. The Prophetic Blocks</a></li>
-                <li><a href="04-480-paradox.html" class="nav-link">4. The 480-Year Paradox</a></li>
-                <li><a href="05-ptolemaic-error.html" class="nav-link active">5. The Ptolemaic Error</a></li>
-                <li><a href="06-astronomical-kill-shot.html" class="nav-link">6. The Astronomical Kill Shot</a></li>
-                <li><a href="07-broken-compasses.html" class="nav-link">7. The Broken Compasses</a></li>
-                <li><a href="08-bayesian-verdict.html" class="nav-link">8. The Bayesian Verdict</a></li>
-                <li><a href="09-pentecost-countdown.html" class="nav-link">9. The Pentecost Countdown</a></li>
-                <li><a href="10-final-calculation.html" class="nav-link">10. The Final Calculation</a></li>
-                <li><a href="11-ultimate-so-what.html" class="nav-link">11. The Ultimate "So What"</a></li>
-                <li><a href="12-final-validation.html" class="nav-link">12. The Final Validation</a></li>
-            </ul>
-			<div class="nav-section-title">Resources</div>
+        <nav class="sidebar" id="site-nav" role="navigation" aria-label="Main navigation">
+<div class="sidebar-header"><h2><a href="index.html" class="site-title">Jubilee 2040</a></h2><p class="author">by Paul Tretter</p><button type="button" class="sidebar__close" aria-label="Close menu">&times;</button></div>
 <ul class="nav-menu">
-    <li><a href="/papers/">📄 Research Papers</a></li>
-    <li><a href="/links/">🔗 Other Links</a></li>
+<li><a href="index.html" class="nav-link">Home</a></li>
+<li class="nav-section-title">The Proof</li>
+<li><a href="01-priestly-courses.html" class="nav-link">1. The Priestly Courses</a></li>
+<li><a href="02-jubilee-cycles.html" class="nav-link">2. The Jubilee Cycles</a></li>
+<li><a href="03-prophetic-blocks.html" class="nav-link">3. The Prophetic Blocks</a></li>
+<li><a href="04-480-paradox.html" class="nav-link">4. The 480-Year Paradox</a></li>
+<li><a href="05-ptolemaic-error.html" class="nav-link active" aria-current="page">5. The Ptolemaic Error</a></li>
+<li><a href="06-astronomical-kill-shot.html" class="nav-link">6. The Astronomical Kill Shot</a></li>
+<li><a href="07-broken-compasses.html" class="nav-link">7. The Broken Compasses</a></li>
+<li><a href="08-bayesian-verdict.html" class="nav-link">8. The Bayesian Verdict</a></li>
+<li><a href="09-pentecost-countdown.html" class="nav-link">9. The Pentecost Countdown</a></li>
+<li><a href="10-final-calculation.html" class="nav-link">10. The Final Calculation</a></li>
+<li><a href="11-ultimate-so-what.html" class="nav-link">11. The Ultimate &quot;So What&quot;</a></li>
+<li><a href="12-final-validation.html" class="nav-link">12. The Final Validation</a></li>
 </ul>
+<div class="nav-section-title">Resources</div><ul class="nav-menu">
+<li><a href="papers/index.html">📄 Research Papers</a></li>
+<li><a href="links/index.html">🔗 Other Links</a></li>
+<li><a href="about.html">ℹ️ About the Author</a></li>
+</ul>
+<div class="nav-section-title">Timeline</div><ul class="nav-menu"><li><a href="timeline.html">📅 Master Timeline</a></li></ul>
+<div class="utilities-section"><div class="utilities-title">Utilities</div><ul class="utilities-menu">
+<li><a href="priestly-course-calculator.html">⚙️ Priestly Course Calculator</a></li>
+<li><a href="calculator.html">🎺 Jubilee Calculator</a></li>
+</ul></div></nav>
 
-        <!-- new timeline code -->
-          <p class="nav-section-title">Timeline</p>
-            <ul class="nav-menu">
-                <li><a href="timeline.html">📅 Master Timeline</a></li>
-            </ul>
-
-			
-            <div class="utilities-section">
-                <div class="utilities-title">Utilities</div>
-                <ul class="utilities-menu">
-                    <li>
-                        <a href="priestly-course-calculator.html">
-                            ⚙️ Priestly Course Calculator
-                        </a>
-                    </li>
-                    <li>
-					     <a href="calculator.html">
-					        🎺 Jubilee Calculator
-					     </a>
-			        </li>
-                </ul>
-            </div>
-        </nav>
-
-        <main class="main-content" role="main">
+        <main id="main-content" class="main-content" role="main">
             <nav class="breadcrumbs" aria-label="Breadcrumb">
                 <a href="index.html">Home</a>
                 <span>›</span>
@@ -131,7 +112,7 @@
 
                 <p>Before delving into the details, the verdict is clear when the two candidates are judged against the primary-source requirements.</p>
 
-                <table style="width: 100%; border-collapse: collapse; margin: 2em 0; background-color: #1a1a2e; color: #d4af37;">
+                <div class="table-scroll"><table style="width: 100%; border-collapse: collapse; margin: 2em 0; background-color: #1a1a2e; color: #d4af37;">
                     <thead>
                         <tr style="background-color: #16213e; border-bottom: 2px solid #d4af37;">
                             <th style="padding: 12px; text-align: left; border: 1px solid #3a3a5c;">Criterion (Based on Primary Sources)</th>
@@ -171,7 +152,7 @@
                             <td style="padding: 12px; text-align: center; border: 1px solid #3a3a5c; color: #44ff44; font-size: 1.2em;">CONFIRMED</td>
                         </tr>
                     </tbody>
-                </table>
+                </table></div>
 
                 <h2>III. The Narrative of Discovery: A Successful Scientific Prediction</h2>
 
@@ -257,5 +238,6 @@
             </footer>
         </main>
     </div>
+    <script src="nav.js" defer></script>
 </body>
 </html>

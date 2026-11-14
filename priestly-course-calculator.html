@@ -124,7 +124,7 @@
         
         .reference-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
             gap: 15px;
             margin-top: 15px;
         }
@@ -511,6 +511,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="nav.css">
 </head>
 <body>
     <header>
@@ -942,5 +943,6 @@
             testKeyDates();
         };
     </script>
+    <script src="nav.js" defer></script>
 </body>
 </html>
